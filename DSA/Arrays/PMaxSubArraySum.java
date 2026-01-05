@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class PMaxSubArraySum {
 
     public static void bruteForce(int arr[], int n) {

@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class PRotateArrayByKPlaces {
 
     public void rotate(int[] nums, int k) {

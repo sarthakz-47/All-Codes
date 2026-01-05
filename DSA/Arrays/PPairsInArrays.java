@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class PPairsInArrays {
 
     static void printPairs(int[] arr) {

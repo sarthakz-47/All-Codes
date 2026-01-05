@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class PTrappingRainWater {
     public static void trappedWater(int arr[], int n) {
 

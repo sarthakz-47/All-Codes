@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class ZpracticeArrays {
 
     public static int largest(int arr[]) {

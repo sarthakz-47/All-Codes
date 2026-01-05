@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class AlgobinarySearch {
 
     public static void searchBinary(int arr[], int target) {

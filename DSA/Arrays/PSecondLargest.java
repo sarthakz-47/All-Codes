@@ -1,3 +1,6 @@
+
+package DSA.Arrays;
+
 public class PSecondLargest {
     public static int secondLargest(int arr[], int n) {
         int max1, max2;

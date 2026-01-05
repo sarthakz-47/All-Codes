@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class PReverseArray {
 
     public static void arrayReverse(int arr[]) {

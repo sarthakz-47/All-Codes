@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class PSubarraysInArrays {
 
     public static void printSubarrays(int[] arr) {

@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class PRemoveDuplicates {
     public static int removeduplicates(int arr[]) {
         int count = 1;

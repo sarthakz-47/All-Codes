@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class PBuySellStocks {
     public static void perfectTimeToBuyOrSellStocks(int arr[], int n) {
         int maxProfit = 0;

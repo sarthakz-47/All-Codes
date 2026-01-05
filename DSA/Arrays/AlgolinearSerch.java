@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class AlgolinearSerch {
 
     public static void searchLinear(int[] arr, int target) {

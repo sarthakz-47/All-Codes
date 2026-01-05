@@ -1,3 +1,6 @@
+
+package DSA.Arrays;
+
 public class PArraySortedOrNot {
     public static boolean sortedornot(int arr[]) {
         for (int i = 1; i < arr.length; i++) {

@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class PRotateArrayBy1Place {
     public static void roatatearray(int arr[]) {
         int n = arr.length;

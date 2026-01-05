@@ -1,3 +1,5 @@
+package DSA.Arrays;
+
 public class PContainsDuplicate {
 
     public static boolean containsDuplicatesOrNot(int[] arr, int n) {
