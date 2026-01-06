@@ -1,97 +1,148 @@
 <!DOCTYPE html>
+<!-- Defines HTML5 document type -->
+
 <html lang="en">
+<!-- Root element of the HTML page, language set to English -->
 
 <head>
-    <tittle>Basics of HTML</tittle>
+    <!-- Contains meta information about the page -->
+    <title>Basics of HTML</title>
+    <!-- Sets the title shown on browser tab -->
 </head>
 
 <body>
+    <!-- Contains all visible content of the webpage -->
 
-    <!-- Paragraph tag(to print text): -->
+    <!-- Paragraph tag: Displays text in paragraph form -->
     <p>Hello There!</p>
 
-
-    <!-- Bold Tag(to bold the text): -->
+    <!-- Bold tag: Makes text bold -->
     <b>My name is Sarthak Jadhav.</b>
+
+    <!-- Paragraph with bold text inside -->
     <p>My Age Is <b>20.</b></p>
 
+    <!-- Italic tag: Displays text in italic style -->
+    <i>Movie</i>
 
-    <!-- Heading Tags(6 diffrent headings) -->
-    <h1>Carrer</h1>
+    <!-- Underline tag: Underlines the text -->
+    <u>2025</u>
+
+    <!-- Heading tags: Used for headings (h1 largest, h6 smallest) -->
+    <h1>Career</h1>
     <h2>DSA</h2>
     <h3>MERN</h3>
     <h4>DevOps</h4>
     <h5>Accenture</h5>
     <h6>Hiring</h6>
 
-
-    <!-- Unorderd Lists (No-Bullets): -->
+    <!-- Unordered list: Displays list with bullets -->
     <ul>
+        <!-- List item -->
         <li>Apple</li>
         <li>Banana</li>
         <li>Guava</li>
     </ul>
 
-
-    <!-- ordered Lists(Bullets): -->
+    <!-- Ordered list: Displays numbered list -->
     <ol>
         <li>Oats</li>
         <li>Panner</li>
         <li>Milk</li>
     </ol>
 
-
-    <!-- orderd list with type(A,a,1,i): -->
+    <!-- Ordered list with type attribute -->
     <ol type="A">
         <li>Soya</li>
         <li>Whey</li>
         <li>Sprouts</li>
     </ol>
 
-
-    <!-- Attributes in HTML: 
-    anything which provides extra information
-    syntax a="b"-->
-
+    <!-- Attribute: Provides extra information to tags -->
     <ul>
         <li>Games</li>
-        <!-- type = 'i' is the attributes in this -->
-        <ol type='i'>
+        <!-- Nested ordered list -->
+        <ol type="i">
             <li>Badminton</li>
             <li>Chess</li>
-            <li>cricket</li>
+            <li>Cricket</li>
         </ol>
     </ul>
 
-    <!-- Anchor Element: Used to link a specefic site -->
+    <!-- Anchor tag: Creates a hyperlink -->
     <a href="https://www.google.com/">Google</a>
     <a href="https://bvcoenm.edu.in/">BVCOENM</a>
 
-    <!-- Image tag: Used to add images to the page -->
-    <img src="america.jpg" alt="random image">
-    <img src="america.jpg" alt="random image" height="300px" width="300px">
+    <!-- Image tag: Displays image on webpage -->
+    <img src="Images/america.jpg" alt="random image">
+
+    <!-- Image with height and width -->
+    <img src="Images/america.jpg" alt="random image" height="300px" width="300px">
+
+    <!-- Image with wrong source shows alt text -->
     <img src="america123.jpg" alt="kya kehta tha america?">
-    <img src="https://m.media-amazon.com/images/I/513p8BwV-RL._AC_UF1000,1000_QL80_.jpg" alt="Acer Laptop">
 
+    <!-- Image from online source -->
+    <img src="https://m.media-amazon.com/images/I/513p8BwV-RL._AC_UF1000,1000_QL80_.jpg" alt="Acer Laptop"
+        height="100px" width="100px">
 
-    <!-- Break tag: used to break a paragraph and start on new line -->
+    <!-- Break tag: Moves text to next line -->
     <p>Tujhe chulu to kuch mujhe ho jayega,<br>jo me chahta hu na ho mujhko!</p>
 
-
-    <!-- Bold Tag: -->
-    <p>saiyara</p>
-    <b>Saiyara</b>
-
-    <!-- Italic Tag: -->
-    <i>Movie</i>
-
-    <!-- Underline Tag: -->
-    <u>2025</u>
-
-    <!-- Horizontal line Tag: -->
+    <!-- Horizontal rule: Draws a horizontal line -->
     <p>Sarthak
-        <hr>Jadhav
+        <hr> Jadhav
     </p>
+
+    <!-- Div tag: Block-level container -->
+    <div>
+        <p>This is div area</p>
+        <p>I'm a gamer</p>
+    </div>
+
+    <!-- Span tag: Inline container -->
+    <span>
+        <p>This is span area</p>
+        <p>This area occupied by span</p>
+    </span>
+
+    <!-- Superscript tag: Displays text above baseline -->
+    <p>a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+
+    <!-- Subscript tag: Displays text below baseline -->
+    <p>H<sub>2</sub>O</p>
+
+    <!-- Header tag: Top section of webpage -->
+    <header>
+        <p>This is heading section</p>
+    </header>
+
+    <!-- Footer tag: Bottom section of webpage -->
+    <footer>
+        <p>This is footer section</p>
+    </footer>
+
+    <!-- Nav tag: Contains navigation links -->
+    <nav>
+        <a href="https://www.google.com">Click me</a>
+    </nav>
+
+    <!-- Main tag: Main content of webpage -->
+    <main>
+        <p>This is content under main tag</p>
+        <ul>
+            <li>Name</li>
+        </ul>
+    </main>
+
+    <!-- Section tag: Groups related content -->
+    <section>
+        <p>This is content under section tag</p>
+    </section>
+
+    <!-- Time tag: Represents date and time -->
+    <time datetime="2026-01-06">January 6, 2026</time>
+
 </body>
 
 </html>
