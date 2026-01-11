@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in HTML</title>
+</head>
+
+<body>
+
+    <!-- 1) <table> tag: 
+    table tag <table> is used for creating tables: -->
+    <table>
+        <!-- caption tag <caption> is used in table tag to describe capotion at top of the table -->
+        <caption>Food Items</caption>
+
+        <!-- table row <tr> tag is used in table tag to create row in a table -->
+        <tr>
+            <!-- table heading <th> tag is used in table row <tr> tag to show a heaing row  -->
+            <th>Item</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <!-- table data <td> tag is used in table row to show simple data -->
+            <td>Samosa</td>
+            <td>20</td>
+        </tr>
+
+        <tr>
+            <td>Frooti</td>
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>Idli</td>
+            <td>15</td>
+        </tr>
+
+    </table>
+
+    <!-- 2)Semantic tags in table: -->
+    <table border="black">
+        <caption>Header Tags</caption>
+        <!-- table head <thead> is used to wrap up all heading tags in single place -->
+        <thead>
+            <tr>
+                <th>Price</th>
+                <th>Profit</th>
+            </tr>
+        </thead>
+
+        <!-- table body <tbody> is used to wrap up all body/data tags in single place -->
+        <tbody>
+            <tr>
+                <td>20</td>
+                <td>-20</td>
+            </tr>
+
+            <tr>
+                <td>100</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td>120</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <!-- 3)colspan and rowspan attributes: -->
+    <!-- used to create cells which spreads over multiple rows or columns -->
+
+    <table border="black">
+        <caption>INR to USD</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Item</th>
+                <th colspan="2">Price</th>
+            </tr>
+            <tr>
+                <th>INR</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Samosa</td>
+                <td>20</td>
+                <td>0.14</td>
+            </tr>
+
+            <tr>
+                <td>Frooti</td>
+                <td>10</td>
+                <td>0.80</td>
+            </tr>
+
+            <tr>
+                <td>Idli</td>
+                <td>15</td>
+                <td>0.23</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <table border="black">
+        <caption>A test table with merged cells</caption>
+        <tbody>
+
+            <tr>
+                <td rowspan="2"></td>
+                <td colspan="2">Avreage</td>
+                <td rowspan="2">Red Eyes</td>
+            </tr>
+
+            <tr>
+                <td>Height</td>
+                <td>Weight</td>
+            </tr>
+
+            <tr>
+                <td>Males</td>
+                <td>1.9</td>
+                <td>0.003</td>
+                <td>40%</td>
+            </tr>
+
+            <tr>
+                <td>Females</td>
+                <td>1.7</td>
+                <td>0.002</td>
+                <td>43%</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
