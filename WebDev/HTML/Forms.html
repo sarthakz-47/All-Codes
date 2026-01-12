@@ -8,7 +8,55 @@
 </head>
 
 <body>
-    <form>
+    <!-- 1.Form tag can be created by <form> -->
+    <form action="/server">
+
+        <!-- 2. Action attribute used to define what action needs to be perform when form is submitted -->
+
+        <!-- 3.Input element in form using type attribute -->
+        Sample Input
+        <input>
+        <br>
+        Enter Text:
+        <input type="text">
+        <br>
+        Select Number:
+        <input type="number">
+        <br>
+        Set Password:
+        <input type="password">
+        <br>
+        Set Time:
+        <input type="time">
+        <br>
+        Choose Color:
+        <input type="color">
+        <br>
+        <!-- and many more... -->
+    </form>
+
+    <form action="/action">
+
+        <!-- 1.Placehoders in forms -->
+        <!-- placeholder is the text which appears before we enter any input -->
+        <input type="text" placeholder="Enter Username">
+        <input type="password" placeholder="Enter Password">
+        <br>
+
+
+        <!-- 2.Lables in forms -->
+        <!-- Label element represents a caption for an item in a user interface -->
+        <label>
+            Enter you age:
+            <input type="number" placeholder="age">
+        </label>
+
+        <!-- but we cannot insert input in label , not a good approach-->
+        <!-- Label Classical Approach for writing using for and id attribute -->
+        <label for="username">Enter your Username: </label>
+        <!-- id attribute is unique and use once for one input -->
+        <input type="text" placeholder="username" id="username">
+
 
     </form>
 </body>

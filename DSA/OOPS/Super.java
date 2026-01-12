@@ -12,10 +12,10 @@ public class Super {
         d.callParentEatMethod();
 
         // 3.Acess Parent Constructor:
-        DogQ d1 = new DogQ();
+        // DogQ d1 = new DogQ();
 
         // without super:
-        CatQ c = new CatQ();
+        // CatQ c = new CatQ();
 
     }
 }
