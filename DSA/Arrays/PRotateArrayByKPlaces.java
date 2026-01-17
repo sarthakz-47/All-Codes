@@ -1,8 +1,10 @@
 package DSA.Arrays;
 
+import java.util.Arrays;
+
 public class PRotateArrayByKPlaces {
 
-    public void rotate(int[] nums, int k) {
+    public static void rightRotate(int[] nums, int k) {
         int n = nums.length;
         // Handle cases where k >= n
         k = k % n;
@@ -17,7 +19,7 @@ public class PRotateArrayByKPlaces {
         reverse(nums, k, n - 1);
     }
 
-    private void reverse(int[] nums, int left, int right) {
+    public static void reverse(int[] nums, int left, int right) {
         while (left < right) {
             int temp = nums[left]; // Store left value
             nums[left] = nums[right]; // Move right value to left
@@ -27,4 +29,17 @@ public class PRotateArrayByKPlaces {
             right--; // Move right pointer backward
         }
     }
+
+    public static void main(String[] args) {
+        int[] nums = { 1, 2, 3, 4, 5, 6, 7 };
+        int k = 3;
+
+        System.out.println("Original array: " + Arrays.toString(nums));
+
+        // Call rotate directly without creating object
+        rightRotate(nums, k);
+
+        System.out.println("Array after rotating by " + k + " places: " + Arrays.toString(nums));
+    }
+
 }
