@@ -18,7 +18,7 @@
     <p>Also goes by the name <b>Steve Rogers</b></p>
     <h2>Hulk</h2>
     <p>Also goes by the name <b>Bruce Banner</b></p>
-
+    <hr>
 
 
     <!-- 2.Print as given (list,img Tag) -->
@@ -32,7 +32,7 @@
                 href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk8kF7_1pUipP31NZEGcXykOBLYIFL47av4Q&s">sees
                 a mango</a></li>
     </ul>
-
+    <hr>
 
 
     <!-- 3.Basic Portfolio (Header,img,list tags) -->
@@ -67,18 +67,19 @@
             <a href="https://youtube.com">yogeshshekade02@gmail.com</a><br><u>8767371874</u>
         </p>
     </ul>
-
+    <hr>
 
 
     <!-- 4.Print as given (super,subscript tags) -->
     <h3>Pythagoras theorem says a<sup>2</sup>+ b<sup>2</sup>=c<sup>2</sup></h3>
     <h3>Formula for glucose is C<sub>6</sub>H<sub>6</sub>O<sub>6</sub></h3>
     <h2>Today is the 9<sup>th</sup> of October and 2<sup>4</sup> = 16 always</h2>
-
+    <hr>
 
     <!-- 5.Print copyright and trademark symbols -->
     <p>leetzSarthak&copy;</p>
     <p>codecSarthak&trade;</p>
+    <hr>
 
     <!-- 6.Create the given table -->
     <table border="black">
@@ -112,6 +113,65 @@
 
         </tbody>
     </table>
+    <hr>
+
+
+    <!-- 7.Recreate the following form with suitable elements and input types: -->
+    <h3>Registration Form</h3>
+    <form action="/server">
+        <div>
+            <input type="text" name="First Name" placeholder="First Name">
+            <input type="text" name="Last Name" placeholder="Last Name">
+        </div>
+        <div>
+            <label for="gender">Please select gender: </label>
+            <select id="gender" name="male">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+            </select>
+        </div>
+        <div>
+            <label for="terms">Do you agree to all terms of services? </label>
+            <input type="checkbox" id="terms" name="terms" checked>
+            <label for="terms">Yes, I agree</label><br>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+    <hr>
+
+    <!-- 8.Recreate the following form using -->
+    <form action="/action">
+        <div>
+            <label for="Name">Name: </label>
+            <input type="text" id="Name">
+        </div>
+        <div>
+            <label>Sex: </label>
+            <input type="radio" id="male" name="sex" value="m">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="sex" value="f">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <label for="country">Country: </label>
+            <select name="country" id="country">
+                <option selected>Slelect an option </option>
+                <option value="IN">India</option>
+                <option value="NP">Nepal</option>
+                <option value="US">USA</option>
+                <option value="CN">Canada</option>
+            </select>
+        </div>
+        <div>
+            <p>Message:</p>
+            <textarea rows="5" cols="25"></textarea>
+        </div>
+        <div>
+            <input type="checkbox" name="subscribe" id="subscribe">
+            <label for="subscribe">Subscribe?</label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 
 </html>

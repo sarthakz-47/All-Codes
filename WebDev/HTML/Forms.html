@@ -61,21 +61,21 @@
         <!-- 3.Button in forms -->
         <!-- Button element is used for creating buttons in the form -->
         <!-- after clicking this it will be redirected to the action link mentioned above -->
-        <button>Submit</button>
+        <button>Submit</button><br>
 
         <!-- types of buttons in forms: -->
         <!-- a.Submit button -> used for submitting the data to the server -->
-        <button type="submit">Sumbit Data</button>
+        <button type="submit">Sumbit Data</button><br>
         <!-- b. Button button -> used for not submitting anything just clicking -->
-        <button type="button">Click me</button>
+        <button type="button">Click me</button><br>
         <!-- c.reset button -> used fot reseting all values entered -->
-        <button type="reset">Reset All</button>
+        <button type="reset">Reset All</button><br>
 
-
+        <!-- 4.name attribute in forms: -->
         <label for="username">Enter Your Name</label>
         <!-- name="username" is used to send this value when the form is submitted -->
         <input type="text" placeholder="enter username" id="name" name="username">
-        <button>Submit</button>
+        <button>Submit</button><br>
 
         <!-- The name attribute defines how data is passed in the URL or backend -->
         <!-- Google search input field -->
@@ -84,20 +84,84 @@
         <button>Search</button>
 
     </form>
+    <hr>
 
     <!-- 3 -->
     <form action="https://www.reddit.com/search">
         <!-- name attribute used for reddit search directly -->
         <input type="text" placeholder="search on Reddit" name="q">
         <button type="submit">Search</button>
-    </form>
+        <hr>
 
-    <!-- 4 -->
-    <form action="https://www.perplexity.ai/search">
-        <!-- name attribute used for perplexity search directly -->
-        <input type="text" placeholder="search on perplexity" name="q">
-        <button type="submit">Search</button>
+
+        <!-- 5.Checkboxes in form: -->
+        <input type="checkbox" id="age" name="age">
+        <label for="age">18+?</label>
+        <!-- if we want already checked boxes: -->
+        <input type="checkbox" id="age" name="age" checked>
+        <label for="age">passed</label>
+        <button type="submit">Submit</button>
+        <!-- after clicking on submit it will show age=on because it is checked -->
+        <hr>
+
+
+        <!-- 6.Radio button input in form: -->
+        <input type="radio" name="gneder" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gneder" id="female">
+        <label for="female">Female</label>
+        <!-- <button type="submit">Submit</button> -->
+        <!-- after clicking submit it will show gender = on but if we want to know which gender is on then use value attribute -->
+        <input type="radio" name="gneder" id="trans" value="trans">
+        <label for="trans">Trans*</label>
+        <button>Submit</button>
+        <!-- now it will print gneder=trans in url -->
+        <hr>
+
+
+        <!-- 7.Select (dropdown) button input in form: -->
+        <lebel for="profession">Select Qualification</lebel>
+        <select name="profession" id="profession">
+            <option value="">Select your option</option>
+            <option value="hsc">HSC</option>
+            <option value="ssc">SSC</option>
+        </select>
+        <button>Submit</button>
+        <!-- this will print the selected dropdown profession=SSC in url -->
+        <hr>
+
+
+        <!-- 8.Range button input in form: -->
+        <label for="volume">Volume</label>
+        <input type="range" name="volume">
+        <button>check</button><br>
+        <!-- this will print volume=number and if we want to define min and max -->
+        <label for="bright">Brightness</label>
+        <input type="range" name="bright" id="bright" min="0" max="200"">
+        <button>check</button><br>
+        <!-- if we want to increase or decrease the range by specefic unit then use step -->
+        <label for=" vol2">Percentage</label>
+        <input type="range" name="vol2" id="vol2" min="0" max="50" step="10">
+        <button>check</button><br>
+        <!-- if we want by default value should stays to 70 then use value attribute -->
+        <label for=" vol3">Percentage2</label>
+        <input type="range" name="vol3" id="vol3" min="0" max="100" step="10" value="70">
+        <button>check</button><br>
+        <hr>
+
+        <!-- 9.Text area input in form: -->
+        <label for="feedback">Enter your feedback:</label>
+        <textarea id="feedback" name="feedback"></textarea>
+        <button>Submit feedback</button><br>
+        <!-- this will print feedback=abcd in the url -->
+        <!-- if you want bigger text area then use row and col attribute -->
+        <label for="opinion">Enter your opinion:</label>
+        <textarea id="opinion" name="opinion" placeholder="write your opinion here" rows="5" cols="50"></textarea>
+        <button>Submit opinion</button><br>
+
     </form>
+    <hr>
+
 </body>
 
 </html>
