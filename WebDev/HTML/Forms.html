@@ -33,10 +33,11 @@
         <input type="color">
         <br>
         <!-- and many more... -->
+        <hr>
     </form>
 
-    <form action="/action">
-
+    <!-- 2 -->
+    <form action="https://www.google.com/search">
         <!-- 1.Placehoders in forms -->
         <!-- placeholder is the text which appears before we enter any input -->
         <input type="text" placeholder="Enter Username">
@@ -57,7 +58,45 @@
         <!-- id attribute is unique and use once for one input -->
         <input type="text" placeholder="username" id="username">
 
+        <!-- 3.Button in forms -->
+        <!-- Button element is used for creating buttons in the form -->
+        <!-- after clicking this it will be redirected to the action link mentioned above -->
+        <button>Submit</button>
 
+        <!-- types of buttons in forms: -->
+        <!-- a.Submit button -> used for submitting the data to the server -->
+        <button type="submit">Sumbit Data</button>
+        <!-- b. Button button -> used for not submitting anything just clicking -->
+        <button type="button">Click me</button>
+        <!-- c.reset button -> used fot reseting all values entered -->
+        <button type="reset">Reset All</button>
+
+
+        <label for="username">Enter Your Name</label>
+        <!-- name="username" is used to send this value when the form is submitted -->
+        <input type="text" placeholder="enter username" id="name" name="username">
+        <button>Submit</button>
+
+        <!-- The name attribute defines how data is passed in the URL or backend -->
+        <!-- Google search input field -->
+        <!-- name="q" is required for Google search queries -->
+        <input type="text" placeholder="search on google!" name="q">
+        <button>Search</button>
+
+    </form>
+
+    <!-- 3 -->
+    <form action="https://www.reddit.com/search">
+        <!-- name attribute used for reddit search directly -->
+        <input type="text" placeholder="search on Reddit" name="q">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- 4 -->
+    <form action="https://www.perplexity.ai/search">
+        <!-- name attribute used for perplexity search directly -->
+        <input type="text" placeholder="search on perplexity" name="q">
+        <button type="submit">Search</button>
     </form>
 </body>
 
