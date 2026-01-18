@@ -322,6 +322,6 @@ class Arrays {
         // System.out.println(checkEven(arr));
         // System.out.println(sum(arr));
         // System.out.println(average(arr));
-        // leftrotate(arr, 2);
+        leftrotate(arr, 2);
     }
 }
