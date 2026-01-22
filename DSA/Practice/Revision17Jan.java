@@ -172,6 +172,7 @@ class CountingSort {
 }
 
 class Arrays {
+
     // Find largest
     public static int largest(int arr[]) {
         int max = arr[0];
@@ -181,17 +182,6 @@ class Arrays {
             }
         }
         return max;
-    }
-
-    // & smallest element
-    public static int smallest(int arr[]) {
-        int min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (min > arr[i]) {
-                min = arr[i];
-            }
-        }
-        return min;
     }
 
     // Reverse an array
@@ -209,6 +199,36 @@ class Arrays {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
+    }
+
+    // Print Pairs
+    public static void printPairs(int[] arr) {
+        int totalPairs = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                System.out.print("(" + arr[i] + "," + arr[j] + ")");
+                totalPairs++;
+            }
+            System.out.println();
+        }
+        System.out.println("Toatal Paris: " + totalPairs);
+    }
+
+    // Print Subarrays
+    public static void printSubarrays(int[] arr) {
+        int totalSubarrays = 0;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr.length; j++) {
+                for (int k = i; k <= j; k++) {
+                    System.out.print(arr[k] + " ");
+                    totalSubarrays++;
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+        System.out.println("Total Subarrays are: " + totalSubarrays);
     }
 
     // Second largest element
@@ -233,6 +253,17 @@ class Arrays {
         return max2;
     }
 
+    // Remove duplicates from sorted array
+    public static int removeDuplicates(int arr[]) {
+        int count = 1;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] != arr[i - 1]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     // Check if array is sorted
     public static boolean checkSorted(int arr[]) {
         for (int i = 0; i < arr.length - 1; i++) {
@@ -241,46 +272,6 @@ class Arrays {
             }
         }
         return true;
-    }
-
-    // Count even & odd elements
-    public static int checkOdd(int arr[]) {
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 != 0) {
-                count++;
-            }
-        }
-        return count;
-    }
-
-    public static int checkEven(int arr[]) {
-        int count = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 2 == 0) {
-                count++;
-            }
-        }
-        return count;
-    }
-
-    // Find sum & average
-    public static int sum(int arr[]) {
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
-        }
-        return sum;
-    }
-
-    public static float average(int arr[]) {
-        float avg = 0;
-        int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
-        }
-        avg = (float) sum / arr.length;
-        return avg;
     }
 
     // Left rotate array by k places
@@ -299,6 +290,22 @@ class Arrays {
         }
     }
 
+    // Right Rotate array by k places
+    public static void rightRotate(int arr[], int k) {
+        int n = arr.length;
+
+        k = k % n;
+        reverse(arr, 0, n - 1);
+
+        reverse(arr, 0, k - 1);
+
+        reverse(arr, k, n - 1);
+
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+
     public static void reverse(int arr[], int start, int end) {
         while (start < end) {
             int temp = arr[start];
@@ -310,18 +317,16 @@ class Arrays {
         }
     }
 
-    //
     public static void main(String[] args) {
-        int arr[] = { 2, 34, 32, 33 };
+        int arr[] = { 20, 22, 23 };
         // System.out.println(largest(arr));
-        // System.out.println(smallest(arr));
         // reverse(arr);
+        // printPairs(arr);
+        // printSubarrays(arr);
         // System.out.println(secondLargest(arr));
+        // System.out.println(removeDuplicates(arr));
         // System.out.println(checkSorted(arr));
-        // System.out.println(checkOdd(arr));
-        // System.out.println(checkEven(arr));
-        // System.out.println(sum(arr));
-        // System.out.println(average(arr));
-        leftrotate(arr, 2);
+        // leftrotate(arr, 2);
+        rightRotate(arr, 2);
     }
 }
