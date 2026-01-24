@@ -1,8 +1,8 @@
 package DSA.Arrays;
 
-class Solution {
+class PFindMissingNum {
     // Function to find the missing number from 1 to N
-    public int missingNumber(int[] a, int N) {
+    public int missingNumberBruteForce(int[] a, int N) {
         // Check each number from 1 to N
         for (int i = 1; i <= N; i++) {
             boolean found = false;
@@ -24,12 +24,31 @@ class Solution {
         return -1;
     }
 
+    public int missingNumberOptimal(int[] a, int N) {
+        // calculate expected sum by sum formula:
+        int expectedSum = N * (N + 1) / 2;
+        // keep track of actual sum:
+        int actualSum = 0;
+
+        // calculate sum of all elements in array:
+        for (int i = 0; i < a.length; i++) {
+            actualSum += a[i];
+        }
+
+        // missing num will be expected sum - actual sum always:
+        return expectedSum - actualSum;
+    }
+
     public static void main(String[] args) {
         int[] a = { 1, 2, 4, 5 };
         int N = 5;
 
-        Solution obj = new Solution();
-        int ans = obj.missingNumber(a, N);
-        System.out.println("The missing number is: " + ans);
+        PFindMissingNum obj = new PFindMissingNum();
+        int ans1 = obj.missingNumberBruteForce(a, N);
+        System.out.println("The missing number is: " + ans1);
+
+        int ans2 = obj.missingNumberOptimal(a, N);
+        System.out.println("Missing Number is: " + ans2);
+
     }
 }
