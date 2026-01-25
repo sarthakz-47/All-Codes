@@ -76,7 +76,7 @@
                     <tr>
                         <td>10.30-11.30</td>
                         <td>Cloud</td>
-                        <td>Prof.Shreya Jadhav</td>
+                        <td>Prof.Her Jadhav</td>
                         <td>Prof.Sakshi</td>
                     </tr>
                 </tbody>
@@ -88,19 +88,62 @@
             <form action="/event">
                 <label for="name">Enter Name:</label>
                 <input type="text" id="name" placeholder="Enter name here" name="name"><br>
+
                 <label for="age">Enter Age:</label>
                 <input type="number" id="age" name="age" placeholder="Enter age here"><br>
+
                 <label for="mail">Enter Mail:</label>
                 <input type="email" id="mail" name="mail" placeholder="Enter mail here"><br>
+
                 <label for="pass">Enter Pssword:</label>
                 <input type="password" id="pass" name="pass" placeholder="Enter password here"><br>
-                <label for="gender">Select Gender:</label>
-                <input type="radio" id="gender" name="male" Male><br>
+
+                <label>Select Gender:</label>
+                <label> <input type="radio" id="male" name="gender" value="male">Male</label>
+
+                <label> <input type="radio" id="female" name="gender" value="female">Female</label><br>
+
+                <label for="skills">Skills:</label>
+                <input type="checkbox" id="html" name="skills" value="html">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="skills" value="css">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="js" name="skills" value="js">
+                <label for="js">JS</label><br>
+
+                <label for="qualification">Select Qualification:</label>
+                <select name="qualification" id="qualification">
+                    <option value="" selected>Select an option</option>
+                    <option value="ssc">SSC</option>
+                    <option value="hsc">HSC</option>
+                    <option value="grad">B.E/B.Tech</option>
+                    <option value="post grad">M.E/M.Tech</option>
+                </select><br>
+
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
             </form>
         </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <p><strong>Thank You for Joinin <i>Code Strom!</i></strong> <br>
+
+            We extend our heartfelt thanks to everyone who attended Code Strom! Your curiosity, energy, and engagement
+            made this event a resounding success.
+
+            From inspiring talks to hands-on workshops, it was amazing to see our tech community come together to learn,
+            share, and innovate.
+
+            Stay connected with us for upcoming events, resources, and opportunities to continue your tech journey.
+            Together, we’ll keep pushing the boundaries of innovation! <br>
+
+            <i>#TechEvent #Innovation #ThankYou #Community</i> <br> &copy;Code Strom
+            <hr>Created from &hearts; with
+            Sarthak
+            &amp; Her!
+        </p>
+    </footer>
 </body>
 
 </html>
