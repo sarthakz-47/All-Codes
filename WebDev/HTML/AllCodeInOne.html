@@ -159,6 +159,252 @@
     <p>a&amp;b</p>
     <p>a&quot;b&quot;</p>
 
+    **14: HTML Tables:
+    tables in html are used to represent real life table data
+    *Tables Tags:
+
+    *a: Table Row Tag:
+    Used to define a row in a table:
+    <table border="black">
+        <tr>
+            <td>Hi</td>
+            <td>Hello</td>
+        </tr>
+        <tr>
+            <td>bye</td>
+        </tr>
+    </table>
+
+    *b: Table Data tag:
+    Used to deifine normal data in table:
+    <table border="black">
+        <tr>
+            <td>Sada Dosa</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Masala Dosa</td>
+            <td>50</td>
+        </tr>
+    </table>
+
+    *c: Table Head Tag:
+    Used to define header of the table data which is default bold:
+    <table border="black">
+        <caption>Food Menu</caption>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+        </tr>
+    </table>
+
+    *d: Caption in table:
+    caption is used to define what table is of or what table actually consists
+    <table border="black">
+        <caption>Food Menu</caption>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Sada Dosa</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Masala Dosa</td>
+            <td>50</td>
+        </tr>
+    </table>
+
+    *e: Semantics in table:
+    semantics are the tags that defines the structure of the table:
+    *i: Table Header Tag: used to sepreate the header part of table:
+    *ii: Table Body tag: used to sepreate main content of table:
+    <table border="black">
+        <caption>Rate</caption>
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Rate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pune</td>
+                <td>2500</td>
+            </tr>
+            <tr>
+                <td>Turbhe</td>
+                <td>1500</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Avreage</td>
+                <td>2000</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    *f: Rowspan Attribute in Table:
+    used to create cells whiich occipies area over multiple rows and columns
+    by default each cell created occupies 1 cell and 1 column but if we want more then use these attribures:
+    <table border="black">
+        <caption>INR To USD Menu</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Item</th>
+                <th colspan="2">Price</th>
+            </tr>
+            <tr>
+                <th>INR</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sheela</td>
+                <td>Pune</td>
+                <td>2500</td>
+            </tr>
+            <tr>
+                <td>Rasmika</td>
+                <td>Turbhe</td>
+                <td>1500</td>
+            </tr>
+        </tbody>
+    </table>
+
+    **15: HTML Forms:
+    used to create forms with various functions:
+
+    **a: Action Attribute in forms:
+    it is used to define what action needs to perform when form is submitted
+    <form action="/action"></form>
+
+    **b: Input in forms:
+    used to create multiple form controls, there are multiple types which can created using type attribute
+
+    *i: Type Attribute in input: used to define which input we needed
+    <form action="/action"> <input type="text">
+        <input type="number">
+        <input type="password">
+        <input type="checkbox">
+    </form>
+
+    *ii: Placeholder Attribute in input: used to display info before entering input
+    <form action="/action">
+        <input type="text" placeholder="Enter Username">
+        <input type="password" placeholder="Enter Password">
+    </form>
+
+    *iii: Labels attribute in input: used to give label to the input box, when we click on label it will automatically
+    shift to input box, id is the unique attribute used to give unique identitiy for input
+    <form action="/action">
+        <label for="name">Name: </label>
+        <input type="text" placeholer="Enter Name" id="name">
+    </form>
+
+    *iv: Name Attribute in forms:
+    when we submit any info the info of that input goes to url in form of name/value pair
+    <form action="/action">
+
+        <label for="age">Enter Age:</label>
+        <input type="number" placeholder="Enter Age" id="age" name="age">
+        <button>Submit</button>
+        OUTPUT->/action?age=23
+
+        <label for="age2">Enter Age:</label>
+        <input type="number" placeholder="Enter Age" id="age2">
+        <button>Submit</button>
+        OUTPUT->/action?age=
+
+        <label for="name">Enter Name:</label>
+        <input type="text" placeholder="Enter Name" id="name" name="name">
+        <button>Submit</button>
+        OUTPUT->/action?name=sarthak
+
+        <label for="name2">Enter Name:</label>
+        <input type="text" placeholder="Enter Name" id="name2">
+        <button>Submit</button>
+        OUTPUT->/action?name=
+
+    </form>
+
+    **if we want to search on any site for ex google then goto the url of the goole and make the name = the query
+    name of that url, here it is "q"
+    <form action="https://www.google.com/search">
+        <input type="text" placeholder="Search on google" name="q">
+        <button>Submit</button>
+    </form>
+
+    ** here in linkedin it is "keywords"
+    <form action="https://www.linkedin.com/search/results/all/">
+        <input type="text" placeholder="Search in linkedin" name="keywords">
+        <button>Submit</button>
+    </form>
+
+    **c: Button Element: used to create various types of buttons
+    <form action="/sarthak">
+
+        *after clicking this button we will be redirected to that link:
+        <button>Submit</button>
+
+        *i: Types of buttons in forms:
+        <button type="submit">Submit Button</button>
+        <button type="button">Normal Button</button>
+        <button type="reset">Reset Button</button>
+    </form>
+
+    **d: More input types:
+    <form action="/action">
+        *i: Checkbox Input: when we want to make a checkbox
+        <label for="age1">18+</label>
+        <input type="checkbox" id="age1" name="age">
+        <input type="checkbox" checked>
+        <button>Submit</button> OUTPUT->age=on
+
+        *ii:Radio Input: when we want a single input from options
+        keeping name attribute same is important to create only one selcted radio button
+        value attribute gives the actual value which is selected:
+        BEFORE VALUE-> /fruit=on
+        AFTER VALUE-> /fruit=apple
+        <input type="radio" id="apple" name="fruit" value="apple">
+        <label for="apple">Apple</label>
+        <input type="radio" id="banana" name="fruit" value="banana">
+        <label for="banana">banana</label>
+        <input type="radio" id="santra" name="fruit" value="santra">
+        <label for="santra">santra</label>
+        <button>Submit</button> OUTPUT->fruit=apple
+
+        *iii: Range Input: when we want a specefic range input from user
+        * step attribure is used to update the range by a fixed value:
+        * value attribute is used to set the default value of the range:
+        <lebel for="vol">Volume</lebel>
+        <input type="range" min="0" max="100" id="vol" name="vol" step="10" value="30">
+        <button>Submit</button> OUTPUT->vol=47
+
+        *iv: Dropdown Input: when we want a specefic range of input selection from user
+        *value attribute is for giving info to backend
+        *selcted attribute is for pre-select the option
+        <select name="qualification" id="qualification">
+            <option value="" selected>Select an option</option>
+            <option value="ssc">SSC</option>
+            <option value="hsc">HSC</option>
+            <option value="grad">B.E/B.Tech</option>
+            <option value="post grad">M.E/M.Tech</option>
+        </select>
+        <button>Submit</button> OUTPUT->qualification=grad
+
+
+
+        *v: Text Area Input:
+        * rows and col attributes are for defining the size of text area box:
+        <lebel for="feedback">Enter Feedback:</lebel>
+        <textarea name="feedback" id="feedback" rows="5" cols="50"></textarea>
+        <button>Submit</button> OUTPUT->feedback=fafaF
+
+    </form>
 </body>
 
 </html>
@@ -169,3 +415,5 @@
 4.DIV AND SPAN TAG (NON-SEMANTIC)
 5.SEMANTIC TAGS: header,main,footer,nav,section
 6.HTML ENTITIES: & name ;
+5.HTML TABLES: table,caption,tr,th,td,rowspan,colspan,semantics
+6.HTML FORMS: action,inputs,placeholder,labels,name,buttons
