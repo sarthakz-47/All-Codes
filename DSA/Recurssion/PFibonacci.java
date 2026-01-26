@@ -3,9 +3,11 @@ package DSA.Recurssion;
 public class PFibonacci {
     public static int fibo(int n) {
         // base case for fibonacci series:
-        if (n == 0 || n == 1)
-            return 1;
+        if (n == 0)
+            return 0;
 
+        if (n == 1)
+            return 1;
         // calculate n-1 th term:
         int f1 = fibo(n - 1);
 
