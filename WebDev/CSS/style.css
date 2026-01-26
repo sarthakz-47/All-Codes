@@ -1,0 +1,22 @@
+h1 {
+    /* 1. color property: used to give color to any element:*/
+    color: blue;
+    /* 2. background color property: used to give background color to any element: */
+    background-color: black;
+    /* 3. RGB color property: used to set cutom colors uisng comnbination of red,black,green: */
+    color: rgb(255, 0, 0);
+    /*red*/
+    color: rgb(0, 255, 0);
+    /*yello*/
+    color: rgb(0, 0, 255);
+    /*blue*/
+    color: rgb(255, 255, 255);
+    /*white*/
+    color: rgb(0, 0, 0);
+    /*black*/
+}
+
+p {
+    color: brown;
+    background-color: burlywood;
+}
