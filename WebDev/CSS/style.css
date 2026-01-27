@@ -1,22 +1,52 @@
 h1 {
     /* 1. color property: used to give color to any element:*/
     color: blue;
-    /* 2. background color property: used to give background color to any element: */
-    background-color: black;
-    /* 3. RGB color property: used to set cutom colors uisng comnbination of red,black,green: */
+    /* 1.a. background color property: used to give background color to any element: */
+    background-color: green;
+    /* 1.b RGB color property: used to set cutom colors uisng comnbination of red,black,green: */
     color: rgb(255, 0, 0);
-    /*red*/
-    color: rgb(0, 255, 0);
-    /*yello*/
-    color: rgb(0, 0, 255);
-    /*blue*/
-    color: rgb(255, 255, 255);
-    /*white*/
-    color: rgb(0, 0, 0);
-    /*black*/
+    /* 1.c Hexcode color property: used to set custom colors using combination of red,black,green and hexcode: */
+    color: #ffffff;
+
+    /* 2.Text Properties: used to customize text styling: */
+    /* 2.a. Text allign property: used to choose where to set the text left,right,center,justify */
+    text-align: start;
+    text-align: end;
+    text-align: center;
+
+    /* 2.b. Font Weight: used to define how much the fonr is light or bold: */
+    font-weight: normal;
+    font-weight: 600;
+
+    /* 2.c. Text Decoration: used to set the apperance of decorative lines on text: */
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: line-through;
+
+    /* 2.d. Line Height: used to control height of the line of the text: */
+    line-height: normal;
+    line-height: 5;
+
+    /* 2.e. Letter Spacing: controls the horizontoal spacing between text characters: */
+    letter-spacing: normal;
+    letter-spacing: 10px;
+
 }
 
 p {
+    /* 1. color property: used to give color to any element:*/
     color: brown;
+    /* 1.a. background color property: used to give background color to any element: */
     background-color: burlywood;
+    /* 2.Text Properties: used to customize text styling: */
+    /* 2.a. Text allign property: used to choose where to set the text left,right,center,justify */
+    text-align: justify;
+    /* 2.b Font Weight: used to define how much the fonr is light or bold: */
+    font-weight: bold;
+    /* 2.c. Text Decoration: used to set the apperance of decorative lines on text: */
+    text-decoration: underline;
+    /* 2.d. Line Height: used to control height of the line of the text: */
+    line-height: 1.5;
+    /* 2.e. Letter Spacing: controls the horizontoal spacing between text characters: */
+    letter-spacing: 1px;
 }

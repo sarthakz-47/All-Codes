@@ -1,13 +1,38 @@
-h2 {
-    color: blue;
-}
-
-button {
-    color: white;
-    background-color: blue;
+body {
+    background-color: wheat;
+    font-family: georgia;
 }
 
 p {
-    color: white;
-    background-color: black;
+    text-align: center;
+    color: red;
+    line-height: 30px;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    color: black;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+a {
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+}
+
+button {
+    background-color: white;
+    color: blueviolet;
+}
+
+textarea {
+    color: #000;
 }
