@@ -18,7 +18,7 @@ class PracticeQuestions {
         obj2.print();
 
         // Q.6
-        VehicleR obj3 = new CarR();
+        // VehicleR obj3 = new CarR();
         // obj3.print1(); ERROR
 
         VehicleR obj4 = new VehicleR();
@@ -26,13 +26,13 @@ class PracticeQuestions {
 
         // Q.7
         System.out.println(Book.count);
-        Book b1 = new Book(150);
-        Book b2 = new Book(250);
+        // Book b1 = new Book(150);
+        // Book b2 = new Book(250);
         System.out.println(Book.count);
 
-        Zar z = new Electric();
-        String result = z.drive();
-        System.out.println(result);
+        // Zar z = new Electric();
+        // String result = z.drive();
+        // System.out.println(result);
     }
 }
 
@@ -145,7 +145,7 @@ class Test {
     static int marks;
 
     void setMarks(int marks) {
-        this.marks = marks; // Line 1
+        // this.marks = marks; // Line 1
     }
 
     public static void main(String[] args) {
@@ -167,8 +167,8 @@ class TestA {
     }
 
     public static void main(String[] args) {
-        TestA t1 = new TestA();
-        t1.changeB();
+        // TestA t1 = new TestA();
+        // t1.changeB();
         System.out.println(TestA.a + TestA.b);
     }
 }
@@ -216,26 +216,28 @@ class Complex {
         c1.sum(c2);
         c1.difference(c2);
         c1.product(c2);
+        sc.close();
     }
 }
 
 // Q.10 What will be the output for this program?
 
 class Automobile {
-    private String drive() {
-        return "Driving vheicle";
-    }
-}
+    // private String drive() {
+    // return "Driving vheicle";
+    // }
+    // }
 
-class Zar extends Automobile {
-    protected String drive() {
-        return "Driving Zar";
+    class Zar extends Automobile {
+        protected String drive() {
+            return "Driving Zar";
+        }
     }
-}
 
-class Electric extends Zar {
-    @Override
-    public final String drive() {
-        return "Driving Electric car";
+    class Electric extends Zar {
+        @Override
+        public final String drive() {
+            return "Driving Electric car";
+        }
     }
 }

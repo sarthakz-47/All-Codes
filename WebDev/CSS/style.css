@@ -31,6 +31,9 @@ h1 {
     letter-spacing: normal;
     letter-spacing: 10px;
 
+    /* 3. Font Family: used to change the font styles of the font: */
+    font-family: cursive;
+
 }
 
 p {
@@ -49,4 +52,7 @@ p {
     line-height: 1.5;
     /* 2.e. Letter Spacing: controls the horizontoal spacing between text characters: */
     letter-spacing: 1px;
+    /* 3. Font Family: used to change the font styles of the font: */
+    font-family: 'Courier New', Courier, monospace;
+
 }
