@@ -1,0 +1,103 @@
+/* 1.Universal selector: used to apply properties on all the content written: */
+* {
+    background-color: white;
+}
+
+/* 2. Element selector: used to apply properties on all the content inside all same elements only: */
+button {
+    font-style: italic;
+}
+
+/* 3.ID selector: used to apply properties on selected elements sub element: */
+#login {
+    font-weight: 900;
+    font-style: normal;
+}
+
+#signup {
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* 4.class selector: used to apply properties on same elements present anywhere in the code: */
+.upvote {
+    background-color: green;
+    color: aliceblue;
+}
+
+/* 5. Descendant Selector: used to apply properties on inside elemts at any level: */
+.div p {
+    color: red
+}
+
+/* 6. Child Combinator: used to apply properties only on the direct children: */
+span>button {
+    color: darkcyan;
+}
+
+/* 7. Sibling Combinators: used to apply properties on immediatly next siblings: */
+p+h3 {
+    text-decoration: underline;
+}
+
+/* 8. Attribute Selector: Targets elements based on attributes: */
+input[type="text"] {
+    background-color: black;
+}
+
+/* 9. Pseudo Classes:Used to define special states of elements: */
+a:hover {
+    color: red
+}
+
+p:active {
+    color: green
+}
+
+h3:focus {
+    color: white;
+}
+
+li:nth-child(2n) {
+    color: bisque;
+}
+
+/* 10. Pseudo Elements: Used to style specific parts of elements: */
+.para::first-letter {
+    font-weight: 900;
+}
+
+/* 11. Cascading in CSS
+When multiple styles apply to the same element, CSS follows:
+Priority Order
+!important
+Inline CSS
+ID selectors
+Class / Attribute / Pseudo-class
+Element selector
+Universal selector */
+
+/* Cascading simply means if speceficity of both selectors becomes same the selector defined later is applied to the page */
+
+/* 12. Specificity Calculation
+Think of it like a score:
+Inline      → 1000
+ID          → 100
+Class       → 10
+Element     → 1
+
+Example:
+#box .item p { }
+Specificity = 100 + 10 + 1 = 111 */
+
+/* 13. !important
+p {
+  color: red !important;
+}
+
+Overrides everything except another !important with higher specificity.
+❌ Bad practice if overused.
+✔ Use only for quick fixes or overrides. */
+
+/* 14.Inheritance: */
+/* simply means when there are multiple elements inside parent element then if we apply some properties to parent element it automatically applies to all other child elements also until they are defined explicitly */
