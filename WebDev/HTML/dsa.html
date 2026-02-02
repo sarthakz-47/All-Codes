@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming Course - Complete Syllabus</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        .toc {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 25px;
+            border-left: 5px solid #4facfe;
+            background: #f8f9ff;
+            border-radius: 0 10px 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            background: #e8f0ff;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(79, 172, 254, 0.2);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin: 0 0 20px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .section h2::before {
+            content: "📚";
+            margin-right: 15px;
+            font-size: 1.5em;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .topic-list li {
+            padding: 12px 20px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-list li::before {
+            content: "→";
+            position: absolute;
+            left: 10px;
+            color: #4facfe;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .topic-list li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(79, 172, 254, 0.3);
+            border-left-color: #4facfe;
+        }
+
+        .topic-list li:hover::before {
+            left: 15px;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        .progress-bar {
+            background: #ecf0f1;
+            height: 8px;
+            border-radius: 4px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            width: 0%;
+            transition: width 2s ease-in-out;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .section {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .topic-list li {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Complete Java Programming Course</h1>
+            <p>Master Java from Basics to Advanced Data Structures & Algorithms</p>
+        </div>
+
+        <div class="toc">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+
+            <div class="section">
+                <h2>Flowcharts and Pseudocode</h2>
+                <ul class="topic-list">
+                    <li>What are Flowcharts</li>
+                    <li>Flowchart Components</li>
+                    <li>Sum of 2 Numbers</li>
+                    <li>Calculate Simple Interest</li>
+                    <li>Max of 3 Numbers</li>
+                    <li>Find if a Number is Prime or not</li>
+                    <li>Sum of first N natural numbers</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Variables & Data Types</h2>
+                <ul class="topic-list">
+                    <li>Creating a Java File</li>
+                    <li>Boilerplate Code</li>
+                    <li>Output in Java</li>
+                    <li>Print a Pattern</li>
+                    <li>Variables in Java</li>
+                    <li>Data Types in Java</li>
+                    <li>Sum of a & b</li>
+                    <li>Comments in Java</li>
+                    <li>Input in Java</li>
+                    <li>Sum of a & b (Input from User)</li>
+                    <li>Product of a & b</li>
+                    <li>Area of a Circle</li>
+                    <li>Type Conversion</li>
+                    <li>Type Casting</li>
+                    <li>Type Promotion in Expression</li>
+                    <li>How does Java code run?</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Operators</h2>
+                <ul class="topic-list">
+                    <li>Types of Operators</li>
+                    <li>Arithmetic Operators</li>
+                    <li>Unary Operators</li>
+                    <li>Relational Operators</li>
+                    <li>Logical Operators</li>
+                    <li>Assignment Operators</li>
+                    <li>Reading Material: Operator Precedence</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Conditional Statements</h2>
+                <ul class="topic-list">
+                    <li>if else</li>
+                    <li>Print the largest of 2 numbers</li>
+                    <li>Print if number is Odd or Even</li>
+                    <li>else if</li>
+                    <li>Income Tax Calculator</li>
+                    <li>Print the largest of 3 numbers</li>
+                    <li>Ternary Operator</li>
+                    <li>Check if a student will Pass or Fail</li>
+                    <li>Switch statement</li>
+                    <li>Calculator</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Loops (Flow Control)</h2>
+                <ul class="topic-list">
+                    <li>Loops Basics</li>
+                    <li>while Loop</li>
+                    <li>Print numbers from 1 to 10</li>
+                    <li>Print numbers from 1 to n</li>
+                    <li>Sum of first N natural numbers</li>
+                    <li>for Loop</li>
+                    <li>Print Square pattern</li>
+                    <li>Print reverse of a number</li>
+                    <li>Reverse the given number</li>
+                    <li>do while Loop</li>
+                    <li>Break statement</li>
+                    <li>Question - break keyword</li>
+                    <li>Continue statement</li>
+                    <li>Question - continue keyword</li>
+                    <li>Check if a number is Prime or not</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Patterns (Part I)</h2>
+                <ul class="topic-list">
+                    <li>Intro to Nested Loops (Star Pattern)</li>
+                    <li>Inverted Star Pattern</li>
+                    <li>Half Pyramid Pattern</li>
+                    <li>Character Pattern</li>
+                    <li>Special Note</li>
+                    <li>Looking Forward - Advanced Patterns</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Functions & Methods</h2>
+                <ul class="topic-list">
+                    <li>Introduction to Functions</li>
+                    <li>Syntax - Function Code Demo</li>
+                    <li>Syntax with Parameters</li>
+                    <li>Parameters v/s Arguments</li>
+                    <li>What happens in memory? (Call Stack)</li>
+                    <li>Call by Value (in Java)</li>
+                    <li>Product of a & b</li>
+                    <li>Find Factorial</li>
+                    <li>Find Binomial Coefficient</li>
+                    <li>Inbuilt v/s User defined Methods</li>
+                    <li>Function Overloading</li>
+                    <li>Overloading using Parameters</li>
+                    <li>Overloading using Data Types</li>
+                    <li>Check if a number is Prime or not</li>
+                    <li>Check Prime (Optimized)</li>
+                    <li>Primes in Range</li>
+                    <li>Binary to Decimal</li>
+                    <li>Code - Binary to Decimal</li>
+                    <li>Decimal to Binary</li>
+                    <li>Code - Decimal to Binary</li>
+                    <li>Method Scope</li>
+                    <li>Block Scope</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Patterns (Part II) - Advanced</h2>
+                <ul class="topic-list">
+                    <li>Hollow Rectangle Pattern</li>
+                    <li>Dry Run - Hollow Rectangle Pattern</li>
+                    <li>Inverted & Rotated Half Pyramid</li>
+                    <li>Inverted Half Pyramid Pattern with Numbers</li>
+                    <li>Floyd's Triangle Pattern</li>
+                    <li>0-1 Triangle Pattern</li>
+                    <li>Butterfly Pattern</li>
+                    <li>Butterfly Pattern Code (explanation continued as well)</li>
+                    <li>Solid Rhombus Pattern</li>
+                    <li>Hollow Rhombus Pattern</li>
+                    <li>Diamond Pattern</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Arrays (Part I)</h2>
+                <ul class="topic-list">
+                    <li>Introduction</li>
+                    <li>Arrays - Creation</li>
+                    <li>Arrays - Input, Output & Update</li>
+                    <li>Arrays as Function Arguments</li>
+                    <li>Space & Time Complexity (Reading Material)</li>
+                    <li>Linear Search</li>
+                    <li>Largest in Array</li>
+                    <li>Binary Search</li>
+                    <li>Binary Search Code</li>
+                    <li>Reverse an Array</li>
+                    <li>Pairs in Array</li>
+                    <li>Print Subarrays</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Arrays (Part II)</h2>
+                <ul class="topic-list">
+                    <li>Max Subarray Sum - I (Brute Force)</li>
+                    <li>Max Subarray Sum - II (Prefix Sum)</li>
+                    <li>Max Subarray Sum - III (Kadane's Algorithm)</li>
+                    <li>Trapping Rainwater</li>
+                    <li>Trapping Rainwater - Code</li>
+                    <li>Best Time to Buy & Sell Stock</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Basic Sorting Algorithms</h2>
+                <ul class="topic-list">
+                    <li>What is sorting?</li>
+                    <li>Bubble Sort</li>
+                    <li>Bubble Sort Code</li>
+                    <li>Selection Sort</li>
+                    <li>Selection Sort Code</li>
+                    <li>Insertion Sort</li>
+                    <li>Insertion Sort Code</li>
+                    <li>Inbuilt Sort</li>
+                    <li>Counting Sort</li>
+                    <li>Counting Sort Code</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>2D Arrays</h2>
+                <ul class="topic-list">
+                    <li>Introduction to 2D Arrays</li>
+                    <li>Real life examples</li>
+                    <li>Representation of 2D Arrays</li>
+                    <li>Creation of 2D Arrays</li>
+                    <li>2D Arrays in Memory</li>
+                    <li>Spiral Matrix</li>
+                    <li>Spiral Matrix Code</li>
+                    <li>Diagonal Sum</li>
+                    <li>Search in Sorted Matrix</li>
+                    <li>Search in Sorted Matrix Code</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Strings</h2>
+                <ul class="topic-list">
+                    <li>What are Strings?</li>
+                    <li>Input/Output</li>
+                    <li>String Length</li>
+                    <li>String Concatenate</li>
+                    <li>String charAt Method</li>
+                    <li>Check if a String is Palindrome</li>
+                    <li>Question - Shortest Path</li>
+                    <li>String Functions - compare</li>
+                    <li>String Functions - substring</li>
+                    <li>Print Largest String</li>
+                    <li>Why Strings are Immutable?</li>
+                    <li>StringBuilder</li>
+                    <li>Convert Letters to Uppercase</li>
+                    <li>String Compression</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Bit Manipulation</h2>
+                <ul class="topic-list">
+                    <li>Introduction to Bit Manipulation</li>
+                    <li>Binary Number System</li>
+                    <li>Bitwise Operators</li>
+                    <li>Binary AND</li>
+                    <li>Binary OR</li>
+                    <li>Binary XOR</li>
+                    <li>Binary 1's Complement</li>
+                    <li>Binary Left Shift</li>
+                    <li>Binary Right Shift</li>
+                    <li>Check if Odd or Even</li>
+                    <li>Get ith Bit</li>
+                    <li>Set ith Bit</li>
+                    <li>Clear ith Bit</li>
+                    <li>Update ith bit</li>
+                    <li>Clear last i bits</li>
+                    <li>Clear range of bits</li>
+                    <li>Check if a number is power of 2 or not</li>
+                    <li>Count set bits in a number</li>
+                    <li>Fast Exponentiation</li>
+                    <li>Fast Exponentiation Code</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Object Oriented Programming (OOPs)</h2>
+                <ul class="topic-list">
+                    <li>Classes & Objects</li>
+                    <li>Access Modifiers</li>
+                    <li>Getters & Setters</li>
+                    <li>Encapsulation</li>
+                    <li>Constructors</li>
+                    <li>Type of Constructors</li>
+                    <li>Copy Constructor</li>
+                    <li>Shallow & Deep Copy</li>
+                    <li>Destructors</li>
+                    <li>Inheritance</li>
+                    <li>Single level Inheritance</li>
+                    <li>Multi level Inheritance</li>
+                    <li>Hierarchical Inheritance</li>
+                    <li>Hybrid Inheritance</li>
+                    <li>Polymorphism</li>
+                    <li>Method Overloading</li>
+                    <li>Method Overriding</li>
+                    <li>Packages in Java</li>
+                    <li>Abstraction</li>
+                    <li>Abstract Classes</li>
+                    <li>Interfaces</li>
+                    <li>Static keyword</li>
+                    <li>Super keyword</li>
+                    <li>Solved Questions Practice</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Recursion Basics (Part 1)</h2>
+                <ul class="topic-list">
+                    <li>What is Recursion?</li>
+                    <li>Print numbers in decreasing order</li>
+                    <li>Stack overflow</li>
+                    <li>Print numbers in increasing order</li>
+                    <li>Find Factorial of N</li>
+                    <li>Print sum of N natural numbers</li>
+                    <li>Print Nth Fibonacci number</li>
+                    <li>Check if array is sorted or not</li>
+                    <li>First Occurrence</li>
+                    <li>Last Occurrence</li>
+                    <li>Print x to the power n</li>
+                    <li>Print x to the power n (Optimized)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Recursion Basics (Part 2)</h2>
+                <ul class="topic-list">
+                    <li>Tiling Problem</li>
+                    <li>Tiling Problem Code</li>
+                    <li>Remove Duplicates in a String</li>
+                    <li>Friends Pairing Problem</li>
+                    <li>Binary Strings Problem</li>
+                    <li>Binary Strings Problem Code</li>
+                    <li>Stack Analysis - Binary Strings</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Divide & Conquer</h2>
+                <ul class="topic-list">
+                    <li>What is Divide & Conquer?</li>
+                    <li>Merge Sort (Basic + Space Optimized)</li>
+                    <li>Merge Sort Code</li>
+                    <li>Quick Sort</li>
+                    <li>Quick Sort Code</li>
+                    <li>Worst Case in Quick Sort</li>
+                    <li>Sorted & Rotated Array Search</li>
+                    <li>Sorted & Rotated Array Code</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Time & Space Complexity</h2>
+                <ul class="topic-list">
+                    <li>Introduction</li>
+                    <li>What is Time Complexity?</li>
+                    <li>Constant Time Complexity</li>
+                    <li>Big O Notation</li>
+                    <li>Big Omega & Theta Notation</li>
+                    <li>Common Complexities</li>
+                    <li>Space Complexity</li>
+                    <li>Simple Loop Analysis</li>
+                    <li>Nested Loop 1 Analysis</li>
+                    <li>Nested Loop 2 Analysis</li>
+                    <li>Nested Loop 3 Analysis</li>
+                    <li>Bubble Sort Analysis</li>
+                    <li>Binary Search Analysis</li>
+                    <li>Recursive Complexity Analysis (Factorial)</li>
+                    <li>Sum of N numbers Analysis</li>
+                    <li>Fibonacci Analysis</li>
+                    <li>Merge Sort Analysis</li>
+                    <li>Recurrence Relation - Merge Sort</li>
+                    <li>Power Function I - Analysis</li>
+                    <li>Power Function II - Analysis</li>
+                    <li>Power Function III - Analysis</li>
+                    <li>How to approach Coding Questions?</li>
+                    <li>Master's Theorem (Reading Material)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Backtracking</h2>
+                <ul class="topic-list">
+                    <li>Introduction</li>
+                    <li>Types of Backtracking</li>
+                    <li>Backtracking on Arrays</li>
+                    <li>Find Subsets</li>
+                    <li>Find Subsets Code</li>
+                    <li>Find Permutations</li>
+                    <li>Find Permutations Code</li>
+                    <li>N Queens - all ways</li>
+                    <li>N Queens - Time Complexity</li>
+                    <li>N Queens - count ways</li>
+                    <li>N Queens - print one solution</li>
+                    <li>Grid Ways</li>
+                    <li>Grid Ways Code</li>
+                    <li>Grid Ways Trick</li>
+                    <li>Sudoku</li>
+                    <li>Sudoku Code</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>ArrayLists</h2>
+                <ul class="topic-list">
+                    <li>Introduction to ArrayList</li>
+                    <li>Operations on ArrayList</li>
+                    <li>Size of ArrayList</li>
+                    <li>Print Reverse</li>
+                    <li>Find Maximum</li>
+                    <li>Swap 2 Numbers</li>
+                    <li>Sorting an ArrayList</li>
+                    <li>ArrayList (Implementation in Java)</li>
+                    <li>Multi-dimensional ArrayList</li>
+                    <li>Container with Most Water (Brute Force)</li>
+                    <li>Container with Most Water (2 Pointer Approach)</li>
+                    <li>Container wMW v/s Trapping Rainwater</li>
+                    <li>Pair Sum - 1 (Brute Force)</li>
+                    <li>Pair Sum - 1 (2 Pointer Approach)</li>
+                    <li>Pair Sum - 2</li>
+                    <li>Pair Sum - 2 (Code)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Linked Lists (Part 1)</h2>
+                <ul class="topic-list">
+                    <li>Introduction to Linked List</li>
+                    <li>Head & Tail in LL</li>
+                    <li>Add First in LL</li>
+                    <li>Add Last in LL</li>
+                    <li>Print a LL</li>
+                    <li>Add in the Middle of LL</li>
+                    <li>Size of a LL</li>
+                    <li>Remove First in LL</li>
+                    <li>Remove Last in LL</li>
+                    <li>Iterative Search</li>
+                    <li>Recursive Search</li>
+                    <li>Reverse a Linked List</li>
+                    <li>Find and Remove Nth Node from End</li>
+                    <li>Check if LL is Palindrome</li>
+                    <li>Check if LL is Palindrome (Code)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Linked Lists (Part 2)</h2>
+                <ul class="topic-list">
+                    <li>Detecting Cycle in LL</li>
+                    <li>Detecting Cycle Code</li>
+                    <li>Removing Cycle in LL</li>
+                    <li>Removing Cycle Code</li>
+                    <li>Removing Cycle Explanation (Math)</li>
+                    <li>Java Collections Framework</li>
+                    <li>LL in Collections Framework</li>
+                    <li>Merge Sort on LL</li>
+                    <li>Merge Sort on LL (Code)</li>
+                    <li>Zig Zag Linked List</li>
+                    <li>Zig Zag LL Code</li>
+                    <li>Doubly LL</li>
+                    <li>Reverse a Doubly LL</li>
+                    <li>Circular LL (Approach)</li>
+                    <li>Circular Linked List (Reading Material)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Stacks (Part 2)</h2>
+                <ul class="topic-list">
+                    <li>Valid Parentheses</li>
+                    <li>Valid Parentheses Code</li>
+                    <li>Duplicate Parentheses</li>
+                    <li>Duplicate Parentheses Code</li>
+                    <li>Maximum Rectangular Area in Histogram</li>
+                    <li>Max Rectangular Area in Histogram (Code)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Queues</h2>
+                <ul class="topic-list">
+                    <li>Introduction to Queues</li>
+                    <li>Queues using Arrays</li>
+                    <li>Circular Queue using Arrays</li>
+                    <li>Queue using LL</li>
+                    <li>Queue using JCF</li>
+                    <li>Queue using Two Stacks</li>
+                    <li>Stack using 2 Queues</li>
+                    <li>First Non-Repeating Letter</li>
+                    <li>Interleave two halves of a Queue</li>
+                    <li>Queue Reversal</li>
+                    <li>Deque (Double Ended Queue)</li>
+                    <li>Deque in JCF</li>
+                    <li>Implement Stack using Deque</li>
+                    <li>Implement Queue using Deque</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Greedy Algorithms</h2>
+                <ul class="topic-list">
+                    <li>Introduction to Greedy</li>
+                    <li>Activity Selection</li>
+                    <li>Activity Selection Code</li>
+                    <li>Activity Selection Explanation</li>
+                    <li>Fractional Knapsack</li>
+                    <li>Fractional Knapsack Code</li>
+                    <li>Minimum Sum absolute difference pairs</li>
+                    <li>Maximum length chain of pairs</li>
+                    <li>Indian Coins</li>
+                    <li>Job Sequencing Problem</li>
+                    <li>Chocola Problem</li>
+                    <li>Chocola Problem Code</li>
+                    <li>Comparators in Java (Reading Material)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Binary Trees (Part 1)</h2>
+                <ul class="topic-list">
+                    <li>Introduction to Binary Trees</li>
+                    <li>Levels & Sub-trees in a Tree</li>
+                    <li>Pop Quiz</li>
+                    <li>Build Tree Preorder</li>
+                    <li>Build Tree Preorder Code</li>
+                    <li>Preorder Traversal</li>
+                    <li>Inorder Traversal</li>
+                    <li>Postorder Traversal</li>
+                    <li>Level order Traversal</li>
+                    <li>Height of a Tree</li>
+                    <li>Count of Nodes of a Tree</li>
+                    <li>Sum of Nodes</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Binary Trees (Part 2)</h2>
+                <ul class="topic-list">
+                    <li>Diameter of a Tree (Approach 1)</li>
+                    <li>Diameter of a Tree (Approach 2)</li>
+                    <li>Subtree of another tree</li>
+                    <li>Subtree of another tree Code</li>
+                    <li>Top View of a Tree (Basics)</li>
+                    <li>Top View of a Tree (Approach)</li>
+                    <li>Top View of a Tree (Code)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Binary Trees (Part 3)</h2>
+                <ul class="topic-list">
+                    <li>Kth Level</li>
+                    <li>Lowest Common Ancestor (Approach 1)</li>
+                    <li>Lowest Common Ancestor (Approach 2)</li>
+                    <li>Minimum Distance between 2 Nodes</li>
+                    <li>Kth ancestor of Node</li>
+                    <li>Transform to Sum Tree</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Binary Search Trees (Part 1)</h2>
+                <ul class="topic-list">
+                    <li>Introduction</li>
+                    <li>Concept of Search in BST</li>
+                    <li>Build a BST</li>
+                    <li>Search in a BST</li>
+                    <li>Delete a Node</li>
+                    <li>Print in Range</li>
+                    <li>Root to Leaf Path</li>
+                    <li>Validate BST</li>
+                    <li>Mirror a BST</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Binary Search Trees (Part 2)</h2>
+                <ul class="topic-list">
+                    <li>Sorted Array to Balanced BST</li>
+                    <li>Convert BST to Balanced BST</li>
+                    <li>Size of Largest BST in BT</li>
+                    <li>Size of Largest BST in BT (Code)</li>
+                    <li>Merge 2 BSTs</li>
+                    <li>AVL Trees</li>
+                    <li>AVL Trees (Reading Material)</li>
+                    <li>Red Black Trees (Reading Material)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Heaps</h2>
+                <ul class="topic-list">
+                    <li>Introduction to Priority Queues</li>
+                    <li>PQ in JCF</li>
+                    <li>PQ for Objects</li>
+                    <li>Introduction to Heaps</li>
+                    <li>Heap Implementation (using CBT)</li>
+                    <li>Insert in Heap</li>
+                    <li>Peek from Heap</li>
+                    <li>Remove from Heap</li>
+                    <li>Heap Sort</li>
+                    <li>Nearby Cars</li>
+                    <li>Connect N Ropes with Minimum Cost</li>
+                    <li>Weakest Soldier</li>
+                    <li>Sliding Window Maximum</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Hashing</h2>
+                <ul class="topic-list">
+                    <li>Hashing Introduction</li>
+                    <li>HashMap</li>
+                    <li>HashMap Operations</li>
+                    <li>Iteration on HashMaps</li>
+                    <li>HashMap Implementation</li>
+                    <li>Update in Code (Reading Material)</li>
+                    <li>HashMap Implementation Code</li>
+                    <li>Special Note</li>
+                    <li>LinkedHashMap</li>
+                    <li>TreeMap</li>
+                    <li>Comparison Table (Reading Material)</li>
+                    <li>Majority Element</li>
+                    <li>Valid Anagram</li>
+                    <li>HashSet</li>
+                    <li>Iteration on HashSet</li>
+                    <li>LinkedHashSet</li>
+                    <li>TreeSet</li>
+                    <li>Count Distinct Elements</li>
+                    <li>Union & Intersection</li>
+                    <li>Find Itinerary for Tickets</li>
+                    <li>Largest Subarray with Sum 0</li>
+                    <li>Subarray Sum Equal to K</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Tries</h2>
+                <ul class="topic-list">
+                    <li>Tries Introduction</li>
+                    <li>What is a Trie?</li>
+                    <li>Creating a Trie</li>
+                    <li>Insertion</li>
+                    <li>Searching</li>
+                    <li>Word Break Problem</li>
+                    <li>Prefix Problem</li>
+                    <li>startsWith Problem</li>
+                    <li>Unique Substrings</li>
+                    <li>Longest Word with all Prefixes</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Graphs (Part 1)</h2>
+                <ul class="topic-list">
+                    <li>Introduction to Graphs</li>
+                    <li>Types of Graphs (Based on Edge)</li>
+                    <li>Graph Representations</li>
+                    <li>Graph Applications</li>
+                    <li>Creating a Graph (Adjacency List)</li>
+                    <li>BFS (Breadth First Search)</li>
+                    <li>DFS (Depth First Search)</li>
+                    <li>Has Path? (using DFS)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Graphs (Part 2)</h2>
+                <ul class="topic-list">
+                    <li>Connected Components</li>
+                    <li>Cycle in Graphs</li>
+                    <li>Cycle Detection (Undirected Graph) - DFS</li>
+                    <li>Bipartite Graph</li>
+                    <li>Cycle Detection (Directed graph) - DFS</li>
+                    <li>Extra Read</li>
+                    <li>Topological Sorting (using DFS)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Graphs (Part 3)</h2>
+                <ul class="topic-list">
+                    <li>Topological Sort using BFS (Kahn's Algorithm)</li>
+                    <li>Topological Sort using BFS (Code)</li>
+                    <li>All Paths from Source to Target</li>
+                    <li>Dijkstra's Algorithm</li>
+                    <li>Dijkstra's Algorithm (Code)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Graphs (Part 4)</h2>
+                <ul class="topic-list">
+                    <li>Bellman Ford Algorithm</li>
+                    <li>Bellman Ford (Code)</li>
+                    <li>What is MST?</li>
+                    <li>Prim's Algorithm</li>
+                    <li>Prim's Code</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Graphs (Part 5)</h2>
+                <ul class="topic-list">
+                    <li>Cheapest Flights within K Stops</li>
+                    <li>Cheapest Flights within K Stops (Code)</li>
+                    <li>Connecting Cities</li>
+                    <li>Connecting Cities (Code)</li>
+                    <li>Disjoint Set Union</li>
+                    <li>Kruskal's Algorithm</li>
+                    <li>Flood Fill Algorithm</li>
+                    <li>Tarjan's Algorithm (Reading Material)</li>
+                    <li>Floyd Warshall Algorithm (Reading Material)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Graphs - Supplemental</h2>
+                <ul class="topic-list">
+                    <li>Strongly Connected Components (Kosaraju's Algorithm)</li>
+                    <li>Bridge in Graph (Tarjan's Algorithm)</li>
+                    <li>Articulation Point (Tarjan's Algorithm)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>DP (Part 1)</h2>
+                <ul class="topic-list">
+                    <li>Introduction to DP</li>
+                    <li>What is DP? (Definition)</li>
+                    <li>Ways of DP</li>
+                    <li>7 Important Concepts</li>
+                    <li>Climbing Stairs (Recursion)</li>
+                    <li>Climbing Stairs (Memoization DP)</li>
+                    <li>Climbing Stairs Variation</li>
+                    <li>Climbing Stairs (Tabulation DP)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>DP (Part 2)</h2>
+                <ul class="topic-list">
+                    <li>Types of Knapsack problems</li>
+                    <li>0-1 Knapsack (Recursion)</li>
+                    <li>0-1 Knapsack (Memoization)</li>
+                    <li>0-1 Knapsack (Tabulation)</li>
+                    <li>Target Sum Subset (Tabulation)</li>
+                    <li>Target Sum Subset (Code)</li>
+                    <li>Unbounded Knapsack (Tabulation)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>DP (Part 3)</h2>
+                <ul class="topic-list">
+                    <li>Coin Change (Live Class)</li>
+                    <li>Rod Cutting</li>
+                    <li>Longest Common Subsequence (Recursion)</li>
+                    <li>LCS (Memoization)</li>
+                    <li>LCS (Tabulation)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>DP (Part 4)</h2>
+                <ul class="topic-list">
+                    <li>Longest Common Substring</li>
+                    <li>Longest Increasing Subsequence</li>
+                    <li>Edit Distance (Explanation)</li>
+                    <li>Edit Distance (Code)</li>
+                    <li>String Conversion</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>DP (Part 5)</h2>
+                <ul class="topic-list">
+                    <li>Wildcard Matching - Hard (Explanation)</li>
+                    <li>Wildcard Matching (Code)</li>
+                    <li>Catalan's Number (Recursion + Memoization)</li>
+                    <li>Catalan's Number (Tabulation)</li>
+                    <li>Count BSTs</li>
+                    <li>Mountain Ranges</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>DP (Part 6)</h2>
+                <ul class="topic-list">
+                    <li>Basics of Matrices (Math)</li>
+                    <li>Matrix Chain Multiplication (Recursion)</li>
+                    <li>MCM (Memoization)</li>
+                    <li>MCM (Tabulation)</li>
+                    <li>Minimum Partitioning</li>
+                    <li>Minimum Array Jumps (Explanation)</li>
+                    <li>Minimum Array Jumps (Code)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Segment Trees</h2>
+                <ul class="topic-list">
+                    <li>Segment Trees Introduction</li>
+                    <li>Count & Meaning of Nodes</li>
+                    <li>Creation of ST</li>
+                    <li>Queries on ST</li>
+                    <li>Update on ST</li>
+                    <li>Max/Min Segment Tree (Creation)</li>
+                    <li>Max/Min Segment Tree (Query/Update)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Complete Java DSA Course Syllabus | Ready to Master Programming! 🚀</p>
+            <p>Generated on February 02, 2026</p>
+        </div>
+    </div>
+
+    <script>
+        // Animate progress bar
+        window.addEventListener('load', () => {
+            const progress = document.getElementById('progress');
+            progress.style.width = '100%';
+        });
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
