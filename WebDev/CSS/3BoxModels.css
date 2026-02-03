@@ -1,0 +1,20 @@
+div {
+    /* 1.height property: used to set the height of the content written inside a element, do not applies on the element, applies on content: */
+    height: 200px;
+    /* 2. Width property: used to set the width of the content written inside a element, do not applies on the element, applies on content: */
+    width: 500px;
+    /* 3.Border Properties: */
+    /* 3.1. Border Width : used to set the thickness of the border, applies on element here not content: */
+    border-width: 2px;
+    /* 3.2. Border style : used to set the style of the border, applies on element here not content: */
+    border-style: solid;
+    /* 3.3. Border color : used to set the color of the border, applies on element here not content: */
+    border-color: black;
+    /* 3.4. Border Shorthand: used to set all of the three above in a order in a single line width|style|color: */
+    border: 3px, dotted, blueviolet;
+    /* 3.5:Border Sides: Border Left,Right,Top,Bottom: used to control an indivisual side of the box: */
+    border-top-width: 5px;
+    border-right-style: solid;
+    border-left-color: green;
+    border-bottom-style: dashed;
+}
