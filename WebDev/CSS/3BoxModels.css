@@ -1,8 +1,10 @@
 div {
     /* 1.height property: used to set the height of the content written inside a element, do not applies on the element, applies on content: */
     height: 200px;
+
     /* 2. Width property: used to set the width of the content written inside a element, do not applies on the element, applies on content: */
     width: 500px;
+
     /* 3.Border Properties: */
     /* 3.1. Border Width : used to set the thickness of the border, applies on element here not content: */
     border-width: 2px;
@@ -17,4 +19,20 @@ div {
     border-right-style: solid;
     border-left-color: green;
     border-bottom-style: dashed;
+    border: solid;
+    /* 3.6. Border Radius: used to round the corners of elements outer edge: */
+    border-radius: 10px;
+
+    /* 4.Padding Properties: padding means the leftover space in up,bottom,right,left after content was written*/
+    /* we can adjust padding using these properties: */
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    /* 5.Margin Proerties: margin means the distance between two boxes of two elements: */
+    /* we can adjust margin using these properties: */
+
+
+
 }
