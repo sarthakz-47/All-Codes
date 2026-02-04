@@ -32,7 +32,10 @@ div {
 
     /* 5.Margin Proerties: margin means the distance between two boxes of two elements: */
     /* we can adjust margin using these properties: */
-
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 
 
 }
