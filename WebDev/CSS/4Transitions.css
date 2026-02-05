@@ -1,0 +1,76 @@
+#alpha {
+    background-color: rgba(255, 0, 0, 0.3);
+    opacity: 0.4;
+}
+
+#transitions {
+    height: 100px;
+    width: 100px;
+    background-color: lightblue;
+    border: 2px solid black;
+    transition: width 1s ease;
+    margin: 0 auto;
+}
+
+#transitions:hover {
+    background-color: yellow;
+    width: 200px;
+}
+
+.a {
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: lightcoral;
+    text-align: center;
+    transform: rotate(45deg);
+
+}
+
+.b {
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: lightblue;
+    text-align: center;
+    transform: scale(1.2);
+
+}
+
+.c {
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    transform: translate(10px, 10px);
+}
+
+.d {
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: lightgray;
+    text-align: center;
+    transform: skew(30deg);
+
+}
+
+.e {
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: lightpink;
+    text-align: center;
+    transform: rotate(30deg), translateX(150px);
+}
