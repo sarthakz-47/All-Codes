@@ -50,8 +50,8 @@ a:hover {
     color: red
 }
 
-p:active {
-    color: green
+.names:active {
+    background-color: black;
 }
 
 h3:focus {
@@ -66,6 +66,15 @@ li:nth-child(2n) {
 .para::first-letter {
     font-weight: 900;
 }
+
+.para::first-line {
+    background-color: lightblue;
+}
+
+.para::selection {
+    background-color: yellow;
+}
+
 
 /* 11. Cascading in CSS
 When multiple styles apply to the same element, CSS follows:

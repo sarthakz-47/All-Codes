@@ -29,6 +29,15 @@ div {
     padding-right: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
+    /* padding shorthands: */
+    /* 4.1 For all sides: */
+    padding: 20px;
+    /* 4.2 For top/bottom or left/right: */
+    padding: 15px 15px;
+    /* 4.3 For top|left and right|bottom: */
+    padding: 30px 15px 30px;
+    /* 4.4 clockwise padding: top|right|bottom|left */
+    padding: 10px 20px 30px 40px;
 
     /* 5.Margin Proerties: margin means the distance between two boxes of two elements: */
     /* we can adjust margin using these properties: */
@@ -37,5 +46,12 @@ div {
     margin-left: 20px;
     margin-right: 20px;
 
+
+}
+
+button {
+    border-radius: 10px;
+    padding-right: 10%;
+    padding-left: 10%;
 
 }
