@@ -45,7 +45,22 @@ div {
     margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
+    /* margin shorthands */
+    /* 4.1 For all sides: */
+    margin: 20px;
+    /* 4.2 For top/bottom or left/right: */
+    margin: 15px 15px;
+    /* 4.3 For top|left and right|bottom: */
+    margin: 30px 15px 30px;
+    /* 4.4 clockwise margin: top|right|bottom|left */
+    margin: 10px 20px 30px 40px;
 
+    /* 6. Display Properties: it is used to display a inline elemetnt to block and vice versa */
+    display: inline;
+    display: block;
+    display: inline-block;
+
+    /* (Read About) 7.Inline vs Block Effects in css */
 
 }
 
@@ -54,4 +69,14 @@ button {
     padding-right: 10%;
     padding-left: 10%;
 
+}
+
+.parent {
+    height: 1%;
+    font-size: 20px;
+}
+
+.child {
+    font-size: 1.2em;
+    padding: 2.5em;
 }

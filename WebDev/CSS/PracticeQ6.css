@@ -1,0 +1,7 @@
+.list li {
+    display: inline;
+}
+
+/* When you use display: inline on <li> items:
+<li> elements are block-level by default, which is why they naturally show bullets.
+Changing them to inline removes the bullets, because bullets only appear on block-level list items in standard flow. */
