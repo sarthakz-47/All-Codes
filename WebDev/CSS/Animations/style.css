@@ -1,0 +1,62 @@
+.box {
+    height: 100px;
+    width: 300px;
+    background-color: yellow;
+    border: 2px solid black;
+
+    animation-name: fontAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+    /*infinite to animate infinitely*/
+    animation-direction: alternate;
+    /*normal,reverse options*/
+
+    /*Animation Shorthand*/
+    /* animtion: name | duration | timing-func | delay | iteration-count | direction */
+    animation: colorAnimate 5s ease-in 1s 5 normal;
+
+    animation: divAnimate 3s ease-in 1s 1 normal;
+}
+
+@keyframes fontAnimation {
+    from {
+        font-size: 20px;
+
+    }
+
+    to {
+        font-size: 40px;
+    }
+}
+
+@keyframes colorAnimate {
+    from {
+        width: 300px;
+        background-color: yellow;
+    }
+
+    to {
+        width: 600px;
+        background-color: black;
+    }
+}
+
+@keyframes divAnimate {
+    0% {
+        background-color: yellow;
+    }
+
+    25% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
