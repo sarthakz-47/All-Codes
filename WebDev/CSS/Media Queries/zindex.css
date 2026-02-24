@@ -1,0 +1,20 @@
+.child1 {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    /* must be declared position: relative/absolute/fixed types only  */
+    position: absolute;
+    /* default z index value is 0,as we increase it it become more demandable to be on surface: */
+    z-index: 1;
+}
+
+.child2 {
+    background-color: pink;
+    height: 100px;
+    width: 100px;
+    /* must be declared position: relative/absolute/fixed types only  */
+    position: absolute;
+    top: 50px;
+    /* if we apply more value than child 1 here it will look on the surface: */
+    /* z-index: 2; */
+}
