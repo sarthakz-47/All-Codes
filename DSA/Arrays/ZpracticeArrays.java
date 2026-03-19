@@ -290,22 +290,25 @@ public class ZpracticeArrays {
         return sum;
     }
 
+    public static void search(int nums[][], int key) {
+        int row = 0;
+        int col = nums[0].length - 1;
+
+        while (row < nums.length && col >= 0) {
+            if (key == nums[row][col]) {
+                System.out.print("key found at:" + row + "," + col);
+                return;
+            } else if (key < nums[row][col]) {
+                // move left:
+                col--;
+            } else {
+                // move down:
+                row++;
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        int arr[] = { 7, 8, 0, 1, 2, 3, 4, 5, 6 };
-        int tar = 0;
-        // int key = 5;
-        // System.out.println(largest(arr));
-        // System.out.println(linearSearch(arr, key));
-        // System.out.println(binarySearch(arr, key));
-        // reverseArray(arr);
-        // printParis(arr);
-        // printSubarrys(arr);
-        // System.out.println(maxSubarraySumPrefix(arr));
-        // System.out.println(kdanesAlgo(arr));
-        // System.out.println(trappingRainwater(arr));
-        // System.out.println(optimizedTrppedWater(arr));
-        // System.out.println(besttimetobuysellstocks(arr));
-        // System.out.println(contaiansduplicate(arr));
-        System.out.println(searchinsortedarray(arr, tar));
+
     }
 }
