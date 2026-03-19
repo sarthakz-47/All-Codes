@@ -74,6 +74,23 @@ public class ZpracticeArrays {
         return -1;
     }
 
+    public static void subarraySumBrute(int arr[]) {
+        int n = arr.length;
+        int maxSum = 0;
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                sum = 0;
+                for (int k = i; k <= j; k++) {
+                    sum += arr[k];
+                }
+                maxSum = Math.max(sum, maxSum);
+            }
+        }
+
+        System.out.print(maxSum);
+    }
+
     public static int maxSubarraySumPrefix(int arr[]) {
         int prefix[] = new int[arr.length];
         prefix[0] = arr[0];
@@ -136,7 +153,7 @@ public class ZpracticeArrays {
         return trappedwater;
     }
 
-    public static int optimizedTrppedWater(int arr[]) {
+    public static int trappingRainwaterTwoPointer(int arr[]) {
         int n = arr.length;
         int left = 0, right = n - 1;
         int leftmax = 0, rightmax = 0;
@@ -155,6 +172,17 @@ public class ZpracticeArrays {
             }
         }
         return trappedwater;
+    }
+
+    public static void stocksBrute(int prices[]) {
+        int maxProfit = 0;
+        for (int i = 0; i < prices.length; i++) {
+            for (int j = i + 1; j < prices.length; j++) {
+                int profit = prices[j] - prices[i];
+                maxProfit = Math.max(profit, maxProfit);
+            }
+        }
+        System.out.println(maxProfit);
     }
 
     public static int besttimetobuysellstocks(int arr[]) {
@@ -189,13 +217,16 @@ public class ZpracticeArrays {
             int mid = start + (end - start) / 2;
             if (arr[mid] == tar)
                 return mid;
+            // When Left Half Is Sorted:
             if (arr[start] <= arr[mid]) {
                 if (arr[start] < tar && tar < arr[mid]) {
                     end = mid - 1;
                 } else {
                     start = mid + 1;
                 }
-            } else {
+            }
+            // When Right Hald if sorted:
+            else {
                 if (arr[mid] < tar && tar < arr[end]) {
                     start = mid + 1;
                 } else {
@@ -204,6 +235,59 @@ public class ZpracticeArrays {
             }
         }
         return -1;
+    }
+
+    public static void spiral(int sp[][]) {
+        int sr = 0, sc = 0;
+        int er = sp.length - 1;
+        int ec = sp[0].length - 1;
+
+        while (sr <= er && sc <= ec) {
+            // top:
+            for (int col = sc; col <= ec; col++) {
+                System.out.print(sp[sr][col]);
+            }
+            // right:
+            for (int row = sr + 1; row <= er; row++) {
+                System.out.print(sp[row][ec]);
+            }
+            // bottom:
+            for (int col = ec - 1; col >= sc; col--) {
+                if (sr == er) {
+                    break;
+                }
+                System.out.print(sp[er][col]);
+            }
+            // left:
+            for (int row = er - 1; row >= sr + 1; row--) {
+                if (sc == ec) {
+                    break;
+                }
+                System.out.print(sp[row][sc]);
+            }
+
+            sr++;
+            sc++;
+            er--;
+            ec--;
+        }
+    }
+
+    public static int diagonalSum(int dg[][]) {
+        int n = dg.length;
+        int sum = 0;
+
+        for (int i = 0; i < n; i++) {
+            // primary diagonal
+            sum += dg[i][i];
+
+            // secondary diagonal
+            if (i != n - 1 - i) { // avoid double count
+                sum += dg[i][n - 1 - i];
+            }
+        }
+
+        return sum;
     }
 
     public static void main(String[] args) {
