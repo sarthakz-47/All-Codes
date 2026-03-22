@@ -1,6 +1,6 @@
 package DSA.Sorting;
 
-public class optimizedBubbleSort {
+class optimizedBubbleSort {
     public static void bubbleSort(int arr[], int n) {
         for (int turn = 0; turn < n - 1; turn++) {
             boolean swapped = false;

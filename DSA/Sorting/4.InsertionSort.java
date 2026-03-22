@@ -1,6 +1,6 @@
 package DSA.Sorting;
 
-public class insertionSort {
+class insertionSort {
 
     public static void sortInsertion(int arr[]) {
         int n = arr.length;

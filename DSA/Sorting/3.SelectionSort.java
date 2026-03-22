@@ -1,6 +1,6 @@
 package DSA.Sorting;
 
-public class selectionSort {
+class selectionSort {
 
     public static void sortSelection(int arr[]) {
         int n = arr.length;

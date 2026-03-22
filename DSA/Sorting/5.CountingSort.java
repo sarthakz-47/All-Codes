@@ -1,6 +1,6 @@
 package DSA.Sorting;
 
-public class countingSort {
+class countingSort {
 
     public static void sortCounting(int[] arr) {
         int maxElement = arr[0];

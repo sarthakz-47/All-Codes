@@ -1,6 +1,6 @@
 package DSA.Sorting;
 
-public class bubbleSortAlgo {
+class bubbleSortAlgo {
     public static void bubbleSort(int arr[], int n) {
         for (int turn = 0; turn < n - 1; turn++) {
             for (int j = 0; j < n - 1 - turn; j++) {
