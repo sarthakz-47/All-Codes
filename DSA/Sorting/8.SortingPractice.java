@@ -4,8 +4,8 @@ class SortingPractice {
 
     // 1.Bubble Sort: O(n) if swapped var is used else O(n^2)
     public static void bubble(int[] arr, int n) {
-        boolean swapped = false;
         for (int i = 0; i < n - 1; i++) {
+            boolean swapped = false;
             for (int j = 0; j < n - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
@@ -13,10 +13,11 @@ class SortingPractice {
                     arr[j + 1] = temp;
                 }
             }
+            if (!swapped) {
+                return;
+            }
         }
-        if (!swapped) {
-            return;
-        }
+
     }
 
     // 2.Selection Sort: TC:O(n^2)
@@ -118,7 +119,7 @@ class SortingPractice {
         }
     }
 
-    // 6.Quick Sort: TC:O(nlogn) SC:O(1)
+    // 6.Quick Sort: TC:O(nlogn) SC:O(logn)
     public static void quickSort(int arr[], int low, int high) {
         if (low >= high) {
             return;
