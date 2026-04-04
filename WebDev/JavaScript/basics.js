@@ -101,7 +101,7 @@ prompt("enter you promt here");
 
 // Practice Questions:
 // Question 1:
-let num = 10;
+let num4 = 10;
 if (num % 10 == 0) {
     console.log("good");
 } else {
@@ -326,3 +326,157 @@ if (arr3.indexOf(ele) != -1) {
 } else {
     console.log(`${ele} do not exists in array.`);
 }
+
+// Loops in JS:
+// For loops: for(intitalization;condition;updation){work}
+// Print numbers from 1 to 5:
+for (let i = 0; i <= 5; i++) {
+    console.log(i);
+}
+console.log("");
+
+// Print odd numbers from 1 to 10:
+for (let i = 0; i <= 10; i++) {
+    if (i % 2 != 0) {
+        console.log(i);
+    }
+}
+console.log("");
+
+// Print even numbers from 1 to 10:
+for (let i = 0; i <= 10; i++) {
+    if (i % 2 == 0) {
+        console.log(i);
+    }
+}
+console.log("");
+
+// Print table of 5:
+for (let i = 1; i <= 10; i++) {
+    console.log(5 * i);
+}
+console.log("");
+
+// Infinite Loops:
+// for (let i = 0; i >= 0; i++) {
+//     console.log("hi");
+// }
+// console.log("");
+
+// Nested Loops:
+for (let i = 0; i <= 3; i++) {
+    for (let j = 0; j <= 3; j++) {
+        console.log(j);
+    }
+    console.log("");
+}
+console.log("");
+
+// While Loops: while(condition){work}
+let i = 1;
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+console.log("");
+
+// Break keyword: used to terminate from the loop
+let lat = 1;
+while (lat <= 5) {
+    if (lat == 3) {
+        break;
+    }
+    console.log(lat);
+    lat++;
+}
+console.log("");
+
+// Loops with arrays:
+let fruits = ["mango", "apple", "banana", "kiwi", "orange"];
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+console.log("");
+
+// Loops with nested arrays:
+let students = [["sarthak", "adarsh", "harsh"], ["no-one", "sanika", "kirti"]];
+for (let i = 0; i < students.length; i++) {
+    for (let j = 0; j < students[i].length; j++) {
+        console.log(students[i][j]);
+    }
+    console.log("");
+}
+
+// for-of loop:
+for (let fruit of fruits) {
+    console.log(fruit);
+}
+console.log("");
+
+for (let char of "sarthak") {
+    console.log(char);
+}
+console.log("");
+
+// Nested for-of loops:
+for (let std of students) {
+    for (let stds of std) {
+        console.log(stds);
+    }
+    console.log("");
+}
+
+
+// Practice Questions:
+// 1: Write a JS program to delete all ocurrences of element ‘num’ in a given array.
+// Example:if arr=[1,2,3,4,5,6,2,3] & num = 2
+// Result should be arr=[1,3,4,5,6,3]
+
+let arrX = [1, 2, 3, 4, 5, 6, 2, 3];
+let num = 2;
+for (let i = 0; i < arrX.length; i++) {
+    if (arrX[i] == num) {
+        s
+        arrX.splice(i, 1);
+    }
+}
+console.log(arrX);
+
+// 2: count the digits in the number:
+let num5 = 287152;
+let count = 0;
+while (num5 > 0) {
+    num5 = Math.floor(num5 / 10);
+    count++;
+}
+console.log(count);
+
+// 3: Find the sum of digits in a number:
+let num6 = 287152;
+let sum = 0;
+
+while (num6 > 0) {
+    let rem = (num6 % 10);
+    sum = sum + rem;
+    num6 = Math.floor(num6 / 10);
+}
+console.log(sum);
+
+// 4: factorial of number n:
+let fact = 1;
+let n3 = 5;
+
+for (let i = 1; i <= n3; i++) {
+    fact = fact * i;
+}
+console.log(fact);
+
+// 5.Largest number in array:
+let arr4 = [33, 2, 21, 32, 44, 54, 21, 20];
+let largest = arr4[0];
+for (let i = 0; i < arr4.length; i++) {
+    if (largest < arr4[i]) {
+        largest = arr4[i];
+    }
+}
+console.log(`largest element from entire array is: ${largest}`);
