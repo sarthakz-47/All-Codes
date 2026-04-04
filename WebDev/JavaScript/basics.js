@@ -162,3 +162,167 @@ if (numx[numx.length - 1] == numy[numy.length - 1]) {
 } else {
     console.log("not same last digit");
 }
+
+// String Methods in JS:
+// Trim Method: Removes extra unwanted spaces from string:
+let oldMsg = "       Hello World   ";
+let oldMsg2 = "Hello World"
+console.log(oldMsg.trim());
+
+// Upper / Lower case method:
+console.log(oldMsg2.toLowerCase());
+console.log(oldMsg2.toUpperCase());
+
+// indexOf method:
+console.log(oldMsg2.indexOf('H'));
+
+// Slice Method:
+console.log(oldMsg2.slice(6));
+console.log(oldMsg2.slice(0, 6));
+
+// Replace Method:
+console.log(oldMsg2.replace("World", "Sarthak"));
+// Reapeat Method:
+console.log(oldMsg2.repeat(3));
+
+// Practice Questions:
+//1: trim and convert to uppercase:
+let msg = "help!";
+// Method Chaining:
+let newMsg = msg.trim().toUpperCase();
+console.log(newMsg);
+
+
+// Arrays in JS: Mutable & stores multiple data types values in single variable
+// Creating and debugging arrays:
+let array = [1, 2, 3, 4]; // array of numbers
+let array1 = [true, false]; // array of bools
+let array2 = ["red", "yellow", "green"]; // array of strings
+let array3 = [1, true, "red", null, 3.14, 'a']; // mixed array
+
+// Array Methods:
+// 1.push() & pop():
+array.push(10); // add to start
+console.log(array);
+array2.pop(); // remove from end
+console.log(array2);
+
+// 2: unshift() / shift():
+array.unshift(0);
+console.log(array); // add to start
+array3.shift();
+console.log(array3); // remove from start
+
+// 3: indexOf() / includes():
+console.log(array.indexOf(2));
+console.log(array3.includes(10));
+
+// 4:concat() / reverse():
+console.log(array.concat(array1));
+console.log(array.reverse());
+
+// 5:slice(): extracts array elements
+console.log(array.slice(1, 3));
+console.log(array.slice(3));
+
+// 6:splice(): remmoves / adds array elements
+let array4 = [1, 2, 3, 4, 5, 6, 7, 8];
+array4.splice(0, 2);
+console.log(array4);
+
+array4.splice(1, 3, "apple", "mango");
+console.log(array4);
+
+// 7:sort(): sorts the array converting val into strings
+let array5 = ["xuv", "bmw", "toyota", "apache"];
+array5.sort();
+console.log(array5);
+
+let array6 = [100, 96, 84, 2, 102];
+array6.sort();
+console.log(array6); // error because it converts num into string UTF numbers and then sorts
+
+// Array References:
+// References = address of val in memory
+// here in array7 add of '1' is 123 and in array8 add of '1' is 789
+let array7 = [1, 2, 3];
+let array8 = [1, 2, 3];
+console.log(array7 == array8);
+// returns false because both elements are same but addreses are diffrent!
+
+// Copying array works:
+let array9 = array7;
+array9.push(10);
+console.log(array9);
+console.log(array7);
+// here add of both var points to same element!
+
+// Constant Arrays:
+// we can add , remove in const array but cannot change the entire array:
+const array10 = [1, 2, 3, 4];
+array10.push(11);
+console.log(array10);
+array10.pop();
+console.log(array10);
+
+// array10 = [11, 22, 33]; // error cannot reassign!
+
+// Nested Arrays:
+// arrays in arrays, 2D:
+let array11 = [[1, 2], [3, 4], [5, 6]];
+console.log(array11);
+console.log(array11[0][1]);
+
+// Practice Questions:
+//1: For the given start state of an array, change it to final form using splice.
+let start = ['jan', 'jul', 'mar', 'aug'];
+// op:['jul','jun','mar','aug']
+let result = start.splice(0, 2, 'jul', 'jun');
+console.log(start);
+
+//2:Return the index of the "javascript" from the given array if it was revresed:
+let lng = ['java', 'html', 'css', 'js', 'react', 'node'];
+console.log(lng.reverse().indexOf('js'));
+
+
+// Assignments Questions:
+//1:Write a JavaScript program to get the first n elements of an array.[n can be any positive number].
+let arr = [7, 9, 0, -2];
+let n = 3;
+console.log(arr.slice(0, n));
+
+//2:Write a JavaScript program to get the last n elements of an array.[n can be any positive number]
+let arr2 = [7, 9, 0, -2];
+let n2 = 3;
+console.log(arr2.slice(arr2.length - n));
+
+//3:Write a JavaScript program to check whether a string is blank or not.
+let str3 = prompt("Enter a string:");
+if (str3 == "") {
+    console.log(`given String ${str3} is empty.`)
+} else {
+    console.log(`given String ${str3} is not empty.`)
+}
+
+//4.Write a JavaScript program to test whether the character at the given (character) index is lowercase
+let str4 = "sarthak";
+let idx = 3;
+if (str4[idx] == str4[idx].toLowerCase()) {
+    console.log("Character is lowercase");
+} else {
+    console.log("Character is not lowercase");
+}
+
+//5: Write a JavaScript program to strip leading and trailing spaces from a string.
+console.log(`original string before: ${str3}`);
+console.log(`original string after: ${str3.trim()}`);
+
+//6:Write a JavaScript program to check if an element exists in an array or not.
+let arr3 = [1, 2, 3, 4];
+let ele = 10;
+
+if (arr3.indexOf(ele) != -1) {
+    console.log(`${ele} do exists in array.`);
+} else {
+    console.log(`${ele} do not exists in array.`);
+}
