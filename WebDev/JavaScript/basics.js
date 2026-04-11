@@ -433,10 +433,9 @@ for (let std of students) {
 // Result should be arr=[1,3,4,5,6,3]
 
 let arrX = [1, 2, 3, 4, 5, 6, 2, 3];
-let num = 2;
+let numX = 2;
 for (let i = 0; i < arrX.length; i++) {
-    if (arrX[i] == num) {
-        s
+    if (arrX[i] == numX) {
         arrX.splice(i, 1);
     }
 }
@@ -516,3 +515,131 @@ while (true) {
         console.log("Enter correct choice from the list and Try again.");
     }
 }
+
+// Objects in JS:
+// a object is a DS, used to store key-value pairs:
+
+// 1. Creating a object in JS:
+const student = {
+    name: "sarthak",
+    age: 21,
+    isMaleStudent: false,
+};
+console.log(student);
+
+const items = {
+    price: 100.23,
+    quantity: 3,
+    colors: ["pink", "blue", "bhagwa"],
+}
+console.log(items);
+
+// 2. Get values from objects:
+// i.Using dot notations:
+console.log(items.price);
+// ii. using bracket notations:
+console.log(items["quantity"]);
+
+// 3.Add/Update/Remove Values from objects:
+const person = {
+    name: "xyz",
+    age: 50,
+    gender: "male   ",
+};
+// i.Add ID:
+person.ID = 123;
+console.log(person);
+
+// ii.update age:
+person.age = 51;
+console.log(person);
+
+// iii. remove gender:
+delete person.gender;
+console.log(person);
+
+// 4. Nested Objects:
+let personA = {
+    name: "abc",
+    marks: {
+        math: 90,
+        science: 80,
+    },
+};
+console.log(personA.marks.science);
+
+// 5.Array of objects:
+let personB = [
+    { name: "abc", age: 20 },
+    { name: "def", age: 21 },
+    { name: "xyz", age: 22 },
+]
+console.log(personB);
+
+// 6.Math objects:
+console.log(Math); // all math obj and fnxs
+Math.round(4.6); // 5
+Math.floor(4.9); // 4
+Math.ceil(4.1); // 5
+Math.abs(-10); // 10
+Math.pow(2, 3); // 8
+Math.sqrt(16); // 4
+console.log(Math.PI); // 3.14
+console.log(Math.E); // 2.71
+
+// Math Random function:
+console.log(Math.random()); // gives any number ranges from 0 -> 1 (excluding 1) changes everytime
+// Print any random integer from 1 to 10:
+// Step 1: generate random number first:
+let num = Math.random();
+// Step 2: multiply it with 10:
+num *= 10;
+// Step 3: take floor of that number:
+Math.floor(num);
+// Step 4: add +1 to result (becasue random() generates from 0 to 1 so if want 10 then we need 1 but 1 is not printed in random())
+console.log(Math.floor(num) + 1);
+
+// Practice Questions:
+// Generate a random number between 1 to 100:
+console.log(Math.floor(Math.random() * 100) + 1);
+// Generate a random number between 1 to 5:
+console.log(Math.floor(Math.random() * 5) + 1);
+
+// Guessing Game:
+let number = prompt("Enter any number: ");
+let randomNum = Math.floor(Math.random() * num) + 1;
+let guessedNum = prompt("Guess a number:");
+while (true) {
+    if (guessedNum == "quit") {
+        console.log("quitting app.");
+        break;
+    }
+    if (guessedNum == randomNum) {
+        console.log("You guessed the coorect number! & the number was: " + randomNum);
+        break;
+    } else {
+        guessedNum = prompt("Your guess was wrong guess again!");
+    }
+}
+
+// Assignments questions:
+// 1:Dice rolls:
+let roll = console.log("Dice rolled and it is: " + (Math.floor(Math.random() * 6) + 1));
+
+// 2: Car object:
+const car = {
+    name: "Hyundai I20",
+    model: 2010,
+    color: "white",
+};
+console.log(car.name);
+
+// 3.Person Object:
+const personC = {
+    name: "sarthak",
+    age: 21,
+    city: "kharghar",
+};
+personC.city = "New York";
+personC.country = "United States";
+console.log(personC);
