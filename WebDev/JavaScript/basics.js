@@ -480,3 +480,39 @@ for (let i = 0; i < arr4.length; i++) {
     }
 }
 console.log(`largest element from entire array is: ${largest}`);
+
+// TO-DO App (only using JS):
+// Step 1: make a empty todo array to store the choices:
+let todo = [];
+
+// Step 2: make action for each choices:
+while (true) {
+
+    // Step 3: take choice from the user:
+    let req = prompt("Enter a choice: 1.add 2.delete 3.list 4.quit");
+    if (req == "quit") {
+        console.log("App cloded. Thank You!");
+        break;
+    }
+
+    if (req == "add") {
+        let task = prompt("enter task to be added: ");
+        todo.push(task);
+        console.log("task added succesfully!");
+    }
+    else if (req == "delete") {
+        let idx = prompt("enter index of task to be deleted: ");
+        if (idx > 0 && idx < todo.length) {
+            todo.splice(idx, 1);
+            console.log("task deleted succesfully!");
+        } else {
+            console.log("enter correct index!");
+        }
+    }
+    else if (req == "list") {
+        console.log(todo);
+    }
+    else {
+        console.log("Enter correct choice from the list and Try again.");
+    }
+}
