@@ -716,3 +716,89 @@ function concat(nameArr) {
 }
 console.log(concat(nameArr));
 
+// 4. Function Expression:
+// Function stored in variable:
+let cheer = function cheerCSK() {
+    console.log("CSK!,CSK!,CSK!");
+}
+cheer();
+
+// 5.Higher order Functions:
+// 1.Takes another func as argument
+// 2.OR returns a func
+
+function hello() {
+    console.log("Hello Saru");
+}
+function callFunc(fn) {
+    fn();
+}
+callFunc(hello);
+
+// Assignmetns Questions:
+// 1.Print the array elemetns greater than given number:
+function arrayElements() {
+    let num = 4;
+
+    for (let i = 0; i <= arrArr.length; i++) {
+        if (arrArr[i] > num) {
+            console.log(arrArr[i] + " ");
+        }
+    }
+}
+
+let arrArr = [1, 2, 3, 4, 5, 6, 7];
+console.log(arrayElements(arrArr));
+
+// 2: function to print unique char from string:
+function unique(stringA) {
+    let ans = "";
+    for (let i = 0; i < stringA.length; i++) {
+        let currChar = stringA[i];
+        if (ans.indexOf(currChar) == - 1) {
+            ans += currChar;
+        }
+    }
+    return ans;
+}
+
+let stringA = "abcdabcdefgggh";
+console.log(unique(stringA));
+
+// 3: function to print largest length country from array:
+function longestCountry(country) {
+    let longest = country[0];
+    for (let i = 1; i < country.length; i++) {
+        if (longest.length < country[i].length) {
+            longest = country[i];
+        }
+    }
+    return longest;
+}
+
+let country = ["Austrilia", "India", "United States of America"];
+console.log(longestCountry(country));
+
+// 4: function to print only vowels from the string:
+function vowels(newStr) {
+    let count = 0;
+    for (let i = 0; i < newStr.length; i++) {
+        if (newStr.charAt(i) == "a" || newStr.charAt(i) == "e" || newStr.charAt(i) == "i" || newStr.charAt(i) == "o" || newStr.charAt(i) == "u") {
+            count++;
+        }
+    }
+    return count;
+}
+
+let newStr = "abcdefijklmnop";
+console.log(vowels(newStr));
+
+// 5: fucntion to print random no from start -> end range:
+function randomNos(start, end) {
+    let diff = end - start;
+    let random = Math.floor(Math.random() * diff) + start;
+    console.log(random);
+}
+
+randomNos(100, 200);
+
