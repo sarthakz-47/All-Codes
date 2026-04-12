@@ -833,3 +833,74 @@ try {
 }
 
 // 3.Arrow Functions:
+// Arrow functions are a shorter way to write functions
+// Rules:
+// ✔ Parentheses are optional for single parameter
+// ✔ But required for multiple parameters
+// ✔ Required if no parameter
+
+// fnx with single parameter
+const square = x => x * x;
+console.log(square(2));
+
+// fnx with multiple parameters:
+const add = (a, b) => {
+    return a + b;
+}
+console.log(add(2, 5));
+
+// fnx with no parameters:
+const sayHello = () => {
+    console.log("Hello!");
+}
+sayHello();
+
+// Implicit return in arrow fnxs: no curly braces for single return statement
+const multiplyA = (a, b) => a * b;
+console.log(multiplyA(2, 3));
+
+// // setTimeout fnx: runs once after delay timeout
+// // syntax: setTimeout(callback,delay);
+// setTimeout(() => {
+//     console.log("Hello after 2 sec");
+// }, 2000)
+
+// // setInterval fnx: runs reapeatedly after delay
+// const id = setInterval(() => {
+//     console.log("Hi!");
+// }, 2000);
+// // to stop it, use setTimeout fnx & clearInterval fnx:
+// setTimeout(() => {
+//     clearInterval(id);
+// }, 6000);
+
+// fnx that prints "Hello World" 5x times at the intervals of 2s each:
+const id2 = setInterval(() => {
+    console.log("Hello World");
+}, 2000);
+setTimeout(() => {
+    clearInterval(id2);
+}, 10000)
+
+// Assignment Questions:
+// 1. Write an arrow function named arrayAverage that accepts an array of numbers and returns the average of those numbers
+const arrayAverage = (nums) => {
+    let sum = 0;
+    for (let i = 0; i < nums.length; i++) {
+        sum = sum + nums[i];
+    }
+    let avg = sum / nums.length;
+    return avg;
+}
+let nums = [100, 75, 100, 0];
+console.log(arrayAverage(nums));
+
+// 2.Write an arrow function named isEven() that takes a single number as argument and returns if it is even or not.
+const isEven = n => {
+    if (n % 2 == 0) {
+        console.log(`${n} is even.`);
+    } else {
+        console.log(`${n} is odd.`)
+    }
+}
+console.log(isEven(54));
