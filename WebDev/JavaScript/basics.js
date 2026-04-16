@@ -1082,6 +1082,32 @@ function greetWithname(greet, ...names) {
 };
 console.log(greetWithname("hello", "sarthak", "shreya"));
 
+// Destructing in arrays:
+// extract values from an array and assign them to variables
+const numsO = [10, 20, 30];
+const [x, y, z] = numsO;
+console.log(x); // 10
+console.log(y); // 20
+console.log(z); // 30
+
+let contestents = ["shreya", "sarthak", "adarsh", "shekade", "harsh"];
+const [winner, runnerup, , fairplay] = contestents;
+console.log(winner);
+console.log(runnerup);
+console.log(fairplay);
+
+// Destructing in objects:
+const userX = {
+    name2: "Rahul",
+    age: 25
+};
+const { name2, age } = userX;
+console.log(name2);
+console.log(age);
+
+const { name: username, city = "Nerul" } = userX;
+console.log(username);
+
 // Assignment Questions:
 // 1. Square and sum the array elements using the arrow function and then find the average of the array.
 const numsL = [1, 2, 3];
