@@ -33,3 +33,31 @@ console.log(document.querySelector("#description")); //selects tag having id
 console.log(document.querySelector(".oldImg")); // selects first img with this class name
 // all:
 console.log(document.querySelectorAll(".oldImg")); // gives collection of all tags containg same class name
+
+
+
+// *.Setting Content in Objects
+// 1. selecting innerText:
+let para = document.querySelector("p");
+console.log(para.innerText); // what we see on op screen window
+// 1. selecting innerHtml:
+console.log(para.innerHTML); // what actually HTML written is
+// 1. selecting textContent:
+console.log(para.textContent); // what we see in HTML code without tags
+
+//*Manipulating properties:
+para.innerText = "Hero Xtreme 125r Dual channel ABS!";
+para.innerHTML = "<u><b>Hero Xtreme 125r Dual channel ABS!<b><u>";
+
+// *.Attributes Manipulation:
+// 1. Get attribute:
+let element = document.querySelector("img");
+console.log(element.getAttribute("id"));
+
+// 2. Set attribute:
+console.log(element.setAttribute("id", "spidyimg"));
+console.log(element.id);
+
+// 3. Remove attribute:
+console.log(element.removeAttribute("id"));
+console.log(element.id);
