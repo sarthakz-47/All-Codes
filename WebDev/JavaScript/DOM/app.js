@@ -49,6 +49,8 @@ console.log(para.textContent); // what we see in HTML code without tags
 para.innerText = "Hero Xtreme 125r Dual channel ABS!";
 para.innerHTML = "<u><b>Hero Xtreme 125r Dual channel ABS!<b><u>";
 
+
+
 // *.Attributes Manipulation:
 // 1. Get attribute:
 let element = document.querySelector("img");
@@ -61,3 +63,38 @@ console.log(element.id);
 // 3. Remove attribute:
 console.log(element.removeAttribute("id"));
 console.log(element.id);
+
+// *.style manipulation:
+let heading = document.querySelector("h1");
+console.dir(heading.style);
+heading.style.color = "red";
+heading.style.backgroundColor = "yellow";
+heading.style.fontSize = "20px";
+// note: CSS properties use camelCase
+// background-color → backgroundColor
+
+
+
+// *.classList Property : Used to manage classes easily
+let box = document.querySelector(".box");
+console.dir(box.classList);
+// Add class: add new class to that element
+box.classList.add("newClass");
+console.dir(box.classList);
+// Remove class: remove class from a element
+box.classList.remove("box");
+console.dir(box.classList);
+// Toggle class: to add and remove classes from element, adds if not present, removes if present
+console.log(box.classList.toggle("active"));
+// Check class: check if there is classList for a specefic element or not
+console.log(box.classList.contains("newClass"));
+console.log(box.classList.contains("box"));
+
+let img2 = document.querySelector(".oldImg");
+console.log(img2.parentNode);
+
+console.log(box.children);
+console.log(box.firstElementChild);
+console.log(box.lastElementChild);
+console.log(box.nextElementSibling);
+console.log(box.previousElementSibling);
