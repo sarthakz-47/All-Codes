@@ -23,7 +23,7 @@ console.log(images);
 
 // *.Selecting Queries:
 // tags:
-console.log(document.querySelector("p")); // selects & returns first match 
+console.log(document.querySelector("p")); // selects & returns first match
 // Ids:
 console.log(document.querySelector("#description")); //selects tag having id
 // class:

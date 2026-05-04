@@ -1,0 +1,14 @@
+* {
+      text-align: center;
+}
+
+div {
+      border: 2px solid black;
+      height: 100px;
+      width: 500px;
+      margin: 100px auto;
+}
+
+button {
+      margin: 50px auto;
+}
