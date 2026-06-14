@@ -301,6 +301,7 @@ class Main {
 
             // 4.update in 2d arrays:
             y[0][1] = 100;
+            y2[0][0] = 18;
             for (int i = 0; i < n1; i++) {
                   for (int j = 0; j < m1; j++) {
                         System.out.print(y[i][j] + " ");
@@ -420,5 +421,136 @@ class Main {
                   System.out.println();
             }
             System.out.println();
+
+            // Questions By SDE sheet: Easy + Med
+            // 1.second largest number: O(n)
+            int[] numb = { 1, 2, 3, 4, 5 };
+            int max1, max2;
+            if (numb[0] > numb[1]) {
+                  max1 = numb[0];
+                  max2 = numb[1];
+            } else {
+                  max1 = numb[1];
+                  max2 = numb[0];
+            }
+            for (int i = 2; i < numb.length; i++) {
+                  if (numb[i] > max1) {
+                        max2 = max1;
+                        max1 = numb[i];
+                  } else if (numb[i] > max2) {
+                        max2 = numb[i];
+                  }
+            }
+            System.out.println(max2);
+
+            // 2.Check if array sorted:
+            for (int i = 0; i < n - 1; i++) {
+                  if (numb[i] > numb[i + 1]) {
+                        System.out.println("not sorted");
+                        return;
+                  }
+            }
+            System.out.println("Sorted");
+
+            // 3.Remove Duplicates from sorted array:
+            // [1,1,2,2,3]->[1,2,3]
+            int[] dup = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+            int p = 0;
+            for (int j = 1; j < dup.length; j++) {
+                  if (dup[p] != dup[j]) {
+                        dup[p + 1] = dup[j];
+                        p++;
+                  }
+            }
+            System.out.println(p + 1);
+
+            // 4.Left rotate array by k places:
+            int k = 3;
+            int rt[] = { 1, 2, 3, 4, 5, 6, 7 };
+            rotateRight(rt, k);
+            for (int nums : rt) {
+                  System.out.print(nums + " ");
+            }
+            System.out.println();
+
+            // 5.Move zeros:
+            int gr[] = { 0, 1, 0, 3, 12 };
+            int l = 0;
+            for (int j = 0; j < gr.length; j++) {
+                  if (gr[j] != 0) {
+                        int temp = gr[j];
+                        gr[j] = gr[l];
+                        gr[l] = temp;
+                        l++;
+                  }
+            }
+            for (int nums : gr) {
+                  System.out.print(nums + " ");
+            }
+            System.out.println();
+
+            // 6.Missing Number:
+            int mn[] = { 7, 5, 3, 4, 1, 2 };
+            int mns = mn.length + 1;
+
+            int totalSum = mns * (mns + 1) / 2;
+            int currSum1 = 0;
+            for (int nums : mn) {
+                  currSum1 += nums;
+            }
+
+            int missingNumber = totalSum - currSum1;
+            System.out.println(missingNumber);
+
+            // 7.Max consucutive ones:
+            int mco[] = { 1, 1, 0, 1, 1, 1, 1 };
+            int count1 = 0;
+            int maxCount = 0;
+
+            for (int i = 0; i < mco.length; i++) {
+                  if (mco[i] == 1) {
+                        count1++;
+                        maxCount = Math.max(count1, maxCount);
+                  } else {
+                        count1 = 0;
+                  }
+            }
+            System.out.println(maxCount);
+
+            // 8.Single Number:
+            int sn[] = { 1, 1, 2, 2, 3, 4, 4 };
+            int x1 = 0;
+            for (int i = 0; i < sn.length; i++) {
+                  x1 = x1 ^ sn[i];
+            }
+            System.out.println(x1);
+      }
+
+      public static void reverse(int[] arr, int start, int end) {
+            while (start < end) {
+                  int temp = arr[start];
+                  arr[start] = arr[end];
+                  arr[end] = temp;
+                  start++;
+                  end--;
+            }
+      }
+
+      public static int[] rotateLeft(int[] rt, int k) {
+            k = k % rt.length;
+            reverse(rt, 0, k - 1);
+            reverse(rt, k, rt.length - 1);
+            reverse(rt, 0, rt.length - 1);
+
+            return rt;
+      }
+
+      public static int[] rotateRight(int[] rt, int k) {
+            k = k % rt.length;
+            reverse(rt, 0, rt.length - 1);
+            reverse(rt, 0, k - 1);
+            reverse(rt, k, rt.length - 1);
+
+            return rt;
       }
 }
