@@ -279,5 +279,146 @@ class Main {
                   minPrice = Math.min(minPrice, prices[i]);
             }
             System.out.println(maxProfit);
+
+            // basics of 2D arrays
+            // 1.creation:
+            int y[][] = { { 1, 2 }, { 3, 4 } };
+            int y2[][] = new int[2][2];
+
+            // 2.rows & colmns in 2d arrays:
+            int n1 = y.length; // no. of rows
+            int m1 = y[0].length; // no. of colms
+            System.out.println("rows=" + n1 + " colms=" + m1);
+
+            // 3.printing 2d array:
+            for (int i = 0; i < n1; i++) {
+                  for (int j = 0; j < m1; j++) {
+                        System.out.print(y[i][j] + " ");
+                  }
+                  System.out.println();
+            }
+            System.out.println();
+
+            // 4.update in 2d arrays:
+            y[0][1] = 100;
+            for (int i = 0; i < n1; i++) {
+                  for (int j = 0; j < m1; j++) {
+                        System.out.print(y[i][j] + " ");
+                  }
+                  System.out.println();
+            }
+            System.out.println();
+
+            // Questions by AC:
+            // 1.Spiral matrix: O(n x m)
+            int[][] sp = { { 1, 2, 3 },
+                        { 4, 5, 6 },
+                        { 7, 8, 9 }
+            };
+            int n2 = sp.length;
+            int m2 = sp[0].length;
+
+            int left = 0;
+            int top = 0;
+            int right = m2 - 1;
+            int bottom = n2 - 1;
+
+            while (top <= bottom && left <= right) {
+                  for (int i = left; i <= right; i++) {
+                        System.out.print(sp[top][i] + " ");
+                  }
+                  top++;
+
+                  for (int i = top; i <= bottom; i++) {
+                        System.out.print(sp[i][right] + " ");
+                  }
+                  right--;
+
+                  if (top <= bottom) {
+                        for (int i = right; i >= left; i--) {
+                              System.out.print(sp[bottom][i] + " ");
+                        }
+                        bottom--;
+                  }
+
+                  if (left <= right) {
+                        for (int i = bottom; i >= top; i--) {
+                              System.out.print(sp[i][left] + " ");
+                        }
+                        left++;
+                  }
+            }
+            System.out.println();
+
+            // 2.Digonal Sum :
+            // 2.1:Brute Force Approach->O(n^2)
+            int sum = 0;
+            for (int i = 0; i < n2; i++) {
+                  for (int j = 0; j < m2; j++) {
+                        if (sp[i][j] == sp[j][i]) {
+                              sum += sp[i][j];
+                        }
+                        if ((i + j) == (n2 - 1) && i != j) {
+                              sum += sp[i][j];
+                        }
+                  }
+            }
+            System.out.println(sum);
+
+            // 2.2:Optimal Approach->O(n)
+            sum = 0;
+            for (int i = 0; i < n2; i++) {
+                  sum += sp[i][i];
+                  sum += sp[i][n2 - i - 1];
+            }
+            if (n2 % 2 == 1) {
+                  sum -= sp[n2 / 2][n2 / 2];
+            }
+            System.out.println(sum);
+
+            // 3.Search in sorted matrix:
+            // 3.1 Brute force-> O(n^2)
+            int tar = 9;
+            for (int i = 0; i < n2; i++) {
+                  for (int j = 0; j < m2; j++) {
+                        if (tar == sp[i][j]) {
+                              System.out.println(i + "," + j);
+                              break;
+                        }
+                  }
+            }
+
+            // 3.2 Optimal Approach-> O(logn)
+            int row = 0;
+            int col = m2 - 1;
+            while (row < n2 && col >= 0) {
+                  if (tar == sp[row][col]) {
+                        System.out.println(row + "," + col);
+                        break;
+                  } else if (tar > sp[row][col]) {
+                        row++;
+                  } else {
+                        col--;
+                  }
+            }
+            System.out.println();
+
+            // 4.Transpose of the matrix:O(n^2)
+            int[][] ex = { { 1, 2, 3 }, { 4, 5, 6 } };
+            int n3 = ex.length;
+            int m3 = ex[0].length;
+            int[][] ans = new int[m3][n3];
+            for (int i = 0; i < n3; i++) {
+                  for (int j = 0; j < m3; j++) {
+                        ans[j][i] = ex[i][j];
+                  }
+            }
+            for (int i = 0; i < m3; i++) {
+                  for (int j = 0; j < n3; j++) {
+                        System.out.print(ans[i][j] + " ");
+                  }
+                  System.out.println();
+            }
+            System.out.println();
       }
 }
