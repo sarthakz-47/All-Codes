@@ -114,7 +114,7 @@ class Main {
             // 1.creation:
             StringBuilder sb = new StringBuilder();
             StringBuilder sb2 = new StringBuilder("Shweta");
-            StringBuilder sb3 = new StringBuilder(50);
+            // StringBuilder sb3 = new StringBuilder(50);
 
             // 2.how to print:
             System.out.println(sb);
@@ -137,6 +137,8 @@ class Main {
             System.out.println(ex);
 
             // 4.replace(idx,idx)-> replace a range of characters.
+            ex.replace(0, 4, "Fello");
+            System.out.println(ex);
 
             // Questions by AC:
             // 1.Check if string is palindrome:
