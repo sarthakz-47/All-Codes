@@ -14,7 +14,7 @@ class Main {
             // 3.How to take input:
             // Scanner sc = new Scanner(System.in);
             // System.out.print("Enter Input String: ");
-            // String str2 = sc.next();
+            // String str2 = sc.nextLine();
             // System.out.println("You entered: "+str2);
 
             // 4.String length function:
@@ -109,6 +109,34 @@ class Main {
                   System.out.print(x + " ");
             }
             System.out.println();
+
+            // Topic: StringBiulder
+            // 1.creation:
+            StringBuilder sb = new StringBuilder();
+            StringBuilder sb2 = new StringBuilder("Shweta");
+            StringBuilder sb3 = new StringBuilder(50);
+
+            // 2.how to print:
+            System.out.println(sb);
+            System.out.println(sb2);
+
+            // Methods:
+            StringBuilder ex = new StringBuilder("Hello Java");
+            // 1.append(string ||int||bool)-> add data at end
+            sb2.append(" Gupta");
+            System.out.println(sb2); // Shweta Gupta
+            sb2.append(" " + 143);
+            System.out.println(sb2); // Shweta Gupta 143
+
+            // 2.insert(idx,str||char)-> add data at specefic idx
+            ex.insert(5, "_"); // Hello_ Java
+            System.out.println(ex);
+
+            // 3.delete(int,int)-> deletes char in specefic range
+            ex.delete(7, 11); // Hello_
+            System.out.println(ex);
+
+            // 4.replace(idx,idx)-> replace a range of characters.
 
             // Questions by AC:
             // 1.Check if string is palindrome:
