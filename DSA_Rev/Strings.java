@@ -140,6 +140,27 @@ class Main {
             ex.replace(0, 4, "Fello");
             System.out.println(ex);
 
+            // 5.reverse()-> reverse the string
+            ex.reverse();
+            System.out.println(ex);
+
+            // 6.length()-> length of the string
+            System.out.println(ex.length());
+
+            // 7.charAt()->
+            System.out.println(ex.charAt(1));
+
+            // 7.1 setCharAt()->
+            ex.setCharAt(1, 'a');
+            System.out.println(ex);
+
+            // 7.2 deleteCharAt()->
+            ex.deleteCharAt(1);
+            System.out.println(ex);
+
+            // 8.toString() -> converts sb to str
+            System.out.println(ex.toString());
+
             // Questions by AC:
             // 1.Check if string is palindrome:
             String pal = "racecar";
@@ -156,5 +177,70 @@ class Main {
                   }
             }
             System.out.println("Palindrome");
+      }
+
+      public void theory() {
+            /*
+             * 1. String (Immutable)
+             * String s = "Hello";
+             * s = s + " World";
+             * System.out.println(s);
+             * 
+             * What happens:
+             * "Hello" object created.
+             * "Hello World" new object created.
+             * Old object remains in memory until garbage collected.
+             * So every modification creates a new object.
+             */
+
+            /*
+             * 2. StringBuilder (Fast)
+             * StringBuilder sb = new StringBuilder("Hello");
+             * sb.append(" World");
+             * System.out.println(sb);
+             * 
+             * Output:
+             * Hello World
+             * 
+             * Here, the same object is modified. No new string object is created each time.
+             * 
+             * Good for:
+             * for(int i = 0; i < 1000; i++) {
+             * sb.append(i);
+             * }
+             */
+
+            /*
+             * 3. StringBuffer (Thread Safe)
+             * StringBuffer sb = new StringBuffer("Hello");
+             * sb.append(" World");
+             * System.out.println(sb);
+             * 
+             * Output:
+             * Hello World
+             * 
+             * Works like StringBuilder, but methods are synchronized:
+             * 
+             * public synchronized StringBuffer append(String str)
+             * This makes it safe when multiple threads access the same object.
+             */
+
+            /*
+             * Interview Answer (1 line)
+             * String → Immutable.
+             * StringBuilder → Mutable, faster, not thread-safe.
+             * StringBuffer → Mutable, thread-safe, slightly slower.
+             * 
+             * Simple Example
+             * String str = "Java";
+             * str += " Programming"; // New object
+             * 
+             * StringBuilder sb1 = new StringBuilder("Java");
+             * sb1.append(" Programming"); // Same object
+             * 
+             * StringBuffer sb2 = new StringBuffer("Java");
+             * sb2.append(" Programming"); // Same object + thread safe
+             */
+
       }
 }
