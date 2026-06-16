@@ -211,3 +211,79 @@ const multiply = (a, b) => {
 console.log(multiply(2, 4));
 const square = x => x * x;
 console.log(square(2));
+
+// 16.2 setTimeout(fnx,delay) method:
+// prints output once after the dealay in x ms
+setTimeout(() => {
+      console.log("hi baby!")
+}, 5000);
+
+// 16.3 setInterval(fnx,interval) method:
+const id = setInterval(() => {
+      console.log("shweta <3")
+}, 2000);
+// 16.4 how to stop setInterval fnx:
+setTimeout(() => {
+      clearInterval(id);
+}, 10000);
+
+// **this keywrod in JS:
+/*
+Think of it like:
+👉 “Who is calling me right now?”
+
+1. In a normal object method
+const user = {
+  name: "Amit",
+  greet() {
+    console.log(this.name);
+  }
+};
+user.greet();
+
+Here:
+this → refers to user
+So output: "Amit"
+
+2. In a regular function (not inside object)
+function show() {
+  console.log(this);
+}
+show();
+
+Here:
+In strict mode → this is undefined
+In non-strict mode → this is window (browser global object)
+
+3. In an arrow function
+Arrow functions do not have their own this.
+They take this from the surrounding scope.
+
+const obj = {
+  name: "Amit",
+  greet: () => {
+    console.log(this.name);
+  }
+};
+obj.greet();
+
+Here:
+this is NOT obj
+It comes from outside → usually window or undefined
+So this.name is not "Amit"
+
+4. In a constructor / class
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+const p = new Person("Amit");
+console.log(p.name);
+
+Here:
+this refers to the new object being created (p)
+Simple rule to remember
+
+👉 this depends on how the function is called, not where it is written.
+*/
