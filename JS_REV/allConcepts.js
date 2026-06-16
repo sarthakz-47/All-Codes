@@ -195,3 +195,19 @@ function sum(a, b) {
 // Block Scope-> {let a = 10}; print(a)-> not valid
 // Fnx Scope-> func(){return a+b}; print(a)->not valid
 // Global Scope-> availabe anywhere
+
+// 15.3 Try-catch method:
+try {
+      console.log(a1);
+} catch (err) {
+      console.log(`Error: ${err.messege}`);
+}
+
+// 16. Arrow Functions:
+// 16.1 how to create:
+const multiply = (a, b) => {
+      return a * b;
+};
+console.log(multiply(2, 4));
+const square = x => x * x;
+console.log(square(2));
