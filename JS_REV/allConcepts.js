@@ -112,6 +112,70 @@ nums[4] = 5; // possible
 console.log(nums);
 // nums = [9,8,7]; // not possible
 
+// 12.4 Importatnt Array Methods:
+// 12.4.1 forEach(fnx): loop through each element in an array
+// arr.forEach(()=>{});
+// forEach() does NOT return a new array
+// It always returns undefined
+let arr1 = ["apple", "ball", "cat"];
+let arr2 = [1, 2, 3, 4, 5, -1];
+arr1.forEach((x) => {
+      console.log(x * x);
+});
+
+arr1.forEach((num, idx) => {
+      console.log(`${idx + 1}.${num}`);
+});
+
+// 12.4.2 map(fnx): creates a new array by applying a function to each element
+// arr.map(()=>{});
+// map()  return a new array
+const power = arr2.map((num) => {
+      return num * num;
+});
+console.log(power);
+
+// 12.4.3 filter(codtn): contains only the elements that pass a condition
+const even = arr2.filter((num) => {
+      return num % 2 == 0;
+});
+console.log(even);
+
+const swa = arr1.filter((str) => {
+      return str.startsWith("a");
+});
+console.log(swa);
+
+// 12.4.4 every(condtn): check all elements in an array satisfy a given condition
+const allOdd = arr2.every((n) => {
+      return n % 2 == 1;
+});
+console.log(allOdd);
+
+// 12.4.5 some(condtn):check at least one elements in an array satisfy a given condition
+const neg = arr2.some((n) => {
+      return n < 0;
+});
+console.log(neg);
+
+// 12.4.5 reduce(): combine all elements of an array into a single value.
+// arr.reduce((accumalator,currentvalue)=>{},initialvalue);
+
+// 12.4.5.1 sum of numbers in array:
+const sumOfElements = arr2.reduce((acc, curr) => {
+      return acc + curr;
+}, 0);
+console.log(sumOfElements);
+
+// 
+
+// 12.4.5.1 find max number:
+const maxNum = arr2.reduce((acc, curr) => {
+      let maxNum = Math.max(acc, curr);
+      return maxNum;
+}, arr2[0]);
+console.log(maxNum);
+
 
 // 13.Loops in JS:
 // 13.1 For loops:
@@ -225,7 +289,7 @@ const id = setInterval(() => {
 // 16.4 how to stop setInterval fnx:
 setTimeout(() => {
       clearInterval(id);
-}, 10000);
+}, 4000);
 
 // **this keywrod in JS:
 /*
@@ -287,3 +351,6 @@ Simple rule to remember
 
 👉 this depends on how the function is called, not where it is written.
 */
+
+// 17. READ ABOUT spread AND rest IN JS IM TIRED NOW.
+
