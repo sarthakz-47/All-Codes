@@ -177,6 +177,32 @@ class Main {
                   }
             }
             System.out.println("Palindrome");
+
+            // 2.Print largest string:
+            String[] forex = { "apple", "banana", "zebra" };
+            String largest = forex[0];
+            for (int i = 0; i < forex.length; i++) {
+                  if (forex[i].compareToIgnoreCase(largest) > 0) {
+                        largest = forex[i];
+                  }
+            }
+            System.out.println(largest);
+
+            // 3.convert letters to uppercase:
+            String ex4 = "my name is shweta";
+            StringBuilder sb3 = new StringBuilder("");
+
+            sb3.append(Character.toUpperCase(ex4.charAt(0)));
+            for (int i = 1; i < ex4.length(); i++) {
+                  if (ex4.charAt(i) == ' ' && i < ex4.length() - 1) {
+                        sb3.append(" ");
+                        i++;
+                        sb3.append(Character.toUpperCase(ex4.charAt(i)));
+                  } else {
+                        sb3.append(ex4.charAt(i));
+                  }
+            }
+            System.out.println(sb3.toString());
       }
 
       public void theory() {
