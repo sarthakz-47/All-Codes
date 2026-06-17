@@ -296,3 +296,20 @@ class Main {
 
       }
 }
+
+// 18-06
+// DSA:
+// 1.Strings
+// -string compression q
+// -strings all easy q
+// 2.D&C
+// -merge sort
+// -quick sort
+
+// DEV:
+// JS - 9,10,mini,11,12,13 whatever possible
+
+// Aptitude:
+// percentages,SI,CI whatever possible
+
+// watch project mern
