@@ -1,5 +1,6 @@
-// import java.util.*;
 package DSA_Rev;
+
+import java.util.*;
 
 class Main {
       public static void main(String[] args) {
@@ -203,6 +204,31 @@ class Main {
                   }
             }
             System.out.println(sb3.toString());
+
+            // 4.Anagrams of each other:
+            String str3 = "race";
+            String str4 = "care";
+
+            str3 = str3.toLowerCase();
+            str4 = str4.toLowerCase();
+
+            if (str3.length() == str4.length()) {
+                  char[] str3chararray = str3.toCharArray();
+                  char[] str4chararray = str4.toCharArray();
+
+                  Arrays.sort(str3chararray);
+                  Arrays.sort(str4chararray);
+
+                  boolean result = Arrays.equals(str3chararray, str4chararray);
+                  if (result) {
+                        System.out.println(str3 + " and " + str4 + " are anagrams of each other.");
+                  } else {
+                        System.out.println(str3 + " and " + str4 + " are not anagrams of each other.");
+                  }
+            } else {
+                  System.out.println(str3 + " and " + str4 + " are not anagrams of each other.");
+            }
+
       }
 
       public void theory() {
