@@ -2,7 +2,7 @@
 // 18.1: document object:
 console.log(document);
 // 18.2: how to change html code with DOM?
-document.all[6].innerText = "hello";
+document.all[8].innerText = "hello";
 // 18.3 : Select element by id:
 let header = document.getElementById("heading");
 console.log(header);
@@ -103,3 +103,30 @@ document.body.prepend(newPara);
 
 // 18.13 Removing elements from the page:
 newPara.remove();
+
+
+// 19. DOM events:
+// DOM Events are actions that happen in a webpage ex. user clicks a btn
+let newBtnn = document.createElement("button");
+newBtnn.innerText = "mello";
+document.body.append(newBtnn);
+
+// 19.1 Mouse events:
+// 19.1.1 click 
+// newBtnn.onclick = function () {
+//       console.log("btn was clicked now");
+// }
+// 19.2.2 dblclick
+// newBtnn.ondblclick = function () {
+//       console.log("btn was dbl clicked now");
+// };
+// 19.2.3 mouseDown
+// newBtnn.onmouseenter = function () {
+//       console.log("hi");
+// }
+
+// 19.2 Event Listners:
+// An Event Listener waits for an event and runs code when that event happens.
+newBtnn.addEventListener("dblclick", () => {
+      console.log("Clicked");
+});
