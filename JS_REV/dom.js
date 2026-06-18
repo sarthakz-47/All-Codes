@@ -59,18 +59,14 @@ box.style.width = "400px";
 // 18.10.1 returns collection of classes defined for object
 let myImg = document.querySelector("#myImage");
 console.dir(myImg.classList);
-
 // 18.10.2 used to add classes to the object:
 myImg.classList.add("myImg1");
 myImg.classList.add("myImg2");
-
 // 18.10.3 used to remove classes from the object:
 myImg.classList.remove("myImg2");
-
 // 18.10.4 returns true or false:
 console.log(myImg.classList.contains("myImg2"));
 console.log(myImg.classList.contains("myImg1"));
-
 // 18.10.5 if a1 class presenet and toggles(a1) then it will be removed
 // if a2 class absent and toggles(a2) then it will be added
 // if a2 class present and toggles(a2) then it will be removed
@@ -83,14 +79,27 @@ myImg.classList.toggle("myImg1");
 // 18.11.1 parent element:
 let pt = document.querySelector("#pt");
 console.dir(pt.parentElement);
-
+// 18.11.2 get all childrens:
 console.log(pt.children);
+// 18.11.3 get first children:
 console.dir(pt.firstElementChild);
+// 18.11.4 get last children:
 console.dir(pt.lastElementChild);
+// 18.11.5 get next sibbling:
 console.dir(pt.nextElementSibling);
+// 18.11.6 get prev sibbling:
 console.dir(pt.previousElementSibling);
 
 
 // 18.12 Adding elements on the page:
-
 // 18.12.1 create element:
+let newPara = document.createElement("p");
+// 18.2.2 add content:
+newPara.innerText = "Hello im new para";
+//18.2.3 append element to the end of page
+document.body.append(newPara);
+//18.2.4 append element to the start of the page
+document.body.prepend(newPara);
+
+// 18.13 Removing elements from the page:
+newPara.remove();
