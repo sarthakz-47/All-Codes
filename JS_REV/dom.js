@@ -130,3 +130,6 @@ document.body.append(newBtnn);
 newBtnn.addEventListener("dblclick", () => {
       console.log("Clicked");
 });
+newBtnn.addEventListener("click", () => {
+      console.log("clicked");
+});
