@@ -1,6 +1,6 @@
 package DSA_Rev;
 
-import java.util.*;
+// import java.util.*;
 
 class Main {
       public static void main(String[] args) {
@@ -164,33 +164,53 @@ class Main {
 
             // Questions by AC:
             // 1.Check if string is palindrome:
-            String pal = "racecar";
+            String s8 = "madam";
+            System.out.println(isPalindrome(s8));
+
+            // 2.Print largest string:
+            String[] forex = { "apple", "banana", "zebra" };
+            System.out.println(largest(forex));
+
+            // 3.convert letters to uppercase:
+            String s9 = "my name is shweta";
+            System.out.println(upperCase(s9));
+
+            // 4.Anagrams of each other:
+            String s10 = "race";
+            String s11 = "care";
+
+            System.out.println(checkAnagramBF(s10, s11));
+            System.out.println(checkAnagramOP(s10, s11));
+      }
+
+      // 1
+      public static boolean isPalindrome(String pal) {
             int start = 0;
             int end = pal.length() - 1;
 
             while (start <= end) {
-                  if (pal.charAt(start) == pal.charAt(end)) {
-                        start++;
-                        end--;
-                  } else {
-                        System.out.println("not palindrome");
-                        return;
+                  if (pal.charAt(start) != pal.charAt(end)) {
+                        return false;
                   }
+                  start++;
+                  end--;
             }
-            System.out.println("Palindrome");
+            return true;
+      }
 
-            // 2.Print largest string:
-            String[] forex = { "apple", "banana", "zebra" };
+      // 2
+      public static String largest(String[] forex) {
             String largest = forex[0];
             for (int i = 0; i < forex.length; i++) {
                   if (forex[i].compareToIgnoreCase(largest) > 0) {
                         largest = forex[i];
                   }
             }
-            System.out.println(largest);
+            return largest;
+      }
 
-            // 3.convert letters to uppercase:
-            String ex4 = "my name is shweta";
+      // 3
+      public static String upperCase(String ex4) {
             StringBuilder sb3 = new StringBuilder("");
 
             sb3.append(Character.toUpperCase(ex4.charAt(0)));
@@ -203,34 +223,57 @@ class Main {
                         sb3.append(ex4.charAt(i));
                   }
             }
-            System.out.println(sb3.toString());
+            return sb3.toString();
+      }
 
-            // 4.Anagrams of each other:
-            String str3 = "race";
-            String str4 = "care";
+      // 4
+      public static boolean checkAnagramBF(String s1, String s2) {
+            int n1 = s1.length();
+            int n2 = s2.length();
 
-            str3 = str3.toLowerCase();
-            str4 = str4.toLowerCase();
-
-            if (str3.length() == str4.length()) {
-                  char[] str3chararray = str3.toCharArray();
-                  char[] str4chararray = str4.toCharArray();
-
-                  Arrays.sort(str3chararray);
-                  Arrays.sort(str4chararray);
-
-                  boolean result = Arrays.equals(str3chararray, str4chararray);
-                  if (result) {
-                        System.out.println(str3 + " and " + str4 + " are anagrams of each other.");
-                  } else {
-                        System.out.println(str3 + " and " + str4 + " are not anagrams of each other.");
-                  }
-            } else {
-                  System.out.println(str3 + " and " + str4 + " are not anagrams of each other.");
+            if (n1 != n2) {
+                  return false;
             }
 
-            // 5.String Compression:
-            c
+            char[] charArray1 = s1.toCharArray();
+            char[] charArray2 = s2.toCharArray();
+
+            java.util.Arrays.sort(charArray1);
+            java.util.Arrays.sort(charArray2);
+
+            for (int i = 0; i < n1; i++) {
+                  if (charArray1[i] != charArray2[i]) {
+                        return false;
+                  }
+            }
+            return true;
+      }
+
+      // 4
+      public static boolean checkAnagramOP(String s1, String s2) {
+            int n1 = s1.length();
+            int n2 = s2.length();
+
+            if (n1 != n2) {
+                  return false;
+            }
+
+            int[] freq = new int[26];
+
+            for (int i = 0; i < n1; i++) {
+                  freq[s1.charAt(i) - 'a']++;
+            }
+
+            for (int i = 0; i < n2; i++) {
+                  freq[s2.charAt(i) - 'a']--;
+            }
+
+            for (int i = 0; i < 26; i++) {
+                  if (freq[i] != 0) {
+                        return false;
+                  }
+            }
+            return true;
       }
 
       public void theory() {
