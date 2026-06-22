@@ -111,5 +111,18 @@ class Main {
             Collections.sort(list, Collections.reverseOrder());
             System.out.println(list);
 
+            // Questions by AC:
+            // 1.print reverse of the arraylist: O(n) + O(1)
+            ArrayList<Integer> revrese2 = new ArrayList<>();
+            revrese.add(1);
+            revrese.add(2);
+            revrese.add(4);
+            revrese.add(8);
+            revrese.add(16);
+            for (int i = revrese2.size() - 1; i >= 0; i--) {
+                  System.out.print(revrese2.get(i) + " ");
+            }
+            System.out.println();
+
       }
 }
