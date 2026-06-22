@@ -103,5 +103,13 @@ class Main {
             System.out.println(swap);
             System.out.println();
 
+            // 10.How to sort arrayList: Collections classs-> Collections.sort();
+            // 10.1 Acending Sorting: O(nlogn)
+            Collections.sort(list);
+            System.out.println(list);
+            // 10.2 Decending Sorting: O(nlogn)
+            Collections.sort(list, Collections.reverseOrder());
+            System.out.println(list);
+
       }
 }
