@@ -65,6 +65,57 @@ class Main {
             Collections.sort(list, Collections.reverseOrder());
             System.out.println(list);
 
+            // 11. Arraylist Implementation in java:
+            /*
+             * Internal Working
+             * When an ArrayList is created:
+             * ArrayList<Integer> list = new ArrayList<>();
+             * 
+             * Java creates an internal array.
+             * Example:
+             * [10,20,30]
+             * If array becomes full:
+             * [10,20,30]
+             * and we add:
+             * list.add(40);
+             * 
+             * Java creates a bigger array:
+             * [10,20,30,40]
+             * Copies old elements into the new array.
+             * This is why ArrayList is called Dynamic Array.
+             * 
+             * Advantages
+             * Dynamic size
+             * Easy insertion
+             * Built-in methods
+             * 
+             * Disadvantages
+             * Extra memory used
+             * Shifting required during insertion/removal
+             */
+
+            // 12.Multi Dimensional arrayList:
+            ArrayList<Integer> list2 = new ArrayList<>();
+            list2.add(1);
+            list2.add(2);
+
+            ArrayList<Integer> list3 = new ArrayList<>();
+            list3.add(3);
+            list3.add(4);
+
+            ArrayList<ArrayList<Integer>> mainList = new ArrayList<>();
+            mainList.add(list2);
+            mainList.add(list3);
+            System.out.println(mainList);
+
+            for (int i = 0; i < mainList.size(); i++) {
+                  ArrayList<Integer> currList = mainList.get(i);
+                  for (int j = 0; j < currList.size(); j++) {
+                        System.out.print(currList.get(j) + " ");
+                  }
+                  System.out.println();
+            }
+
             // Questions by AC:
             // 1.print reverse of the arraylist: O(n) + O(1)
             ArrayList<Integer> revrese = new ArrayList<>();
@@ -101,28 +152,47 @@ class Main {
             swap.set(idx2, temp);
 
             System.out.println(swap);
-            System.out.println();
 
-            // 10.How to sort arrayList: Collections classs-> Collections.sort();
-            // 10.1 Acending Sorting: O(nlogn)
-            Collections.sort(list);
-            System.out.println(list);
-            // 10.2 Decending Sorting: O(nlogn)
-            Collections.sort(list, Collections.reverseOrder());
-            System.out.println(list);
+            // 4.Container With Most Water:
+            // 4.1 Brute Force: O(N^2)
+            int[] height = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+            System.out.println(maxAreaBF(height));
+            // 4.2 Optimal Approach: O(N)
+            System.out.println(maxAreaOP(height));
+      }
 
-            // Questions by AC:
-            // 1.print reverse of the arraylist: O(n) + O(1)
-            ArrayList<Integer> revrese2 = new ArrayList<>();
-            revrese.add(1);
-            revrese.add(2);
-            revrese.add(4);
-            revrese.add(8);
-            revrese.add(16);
-            for (int i = revrese2.size() - 1; i >= 0; i--) {
-                  System.out.print(revrese2.get(i) + " ");
+      public static int maxAreaBF(int[] arr) {
+            int n = arr.length;
+            int maxArea = 0;
+            for (int i = 0; i < n; i++) {
+                  for (int j = i + 1; j < n; j++) {
+                        int ht = Math.min(arr[i], arr[j]);
+                        int wd = j - i;
+                        int currArea = ht * wd;
+                        maxArea = Math.max(currArea, maxArea);
+                  }
             }
-            System.out.println();
+            return maxArea;
+      }
 
+      public static int maxAreaOP(int arr[]) {
+            int n = arr.length;
+            int maxArea = 0;
+            int start = 0;
+            int end = n - 1;
+
+            while (start < end) {
+                  int ht = Math.min(arr[start], arr[end]);
+                  int wd = end - start;
+                  int currArea = ht * wd;
+                  maxArea = Math.max(currArea, maxArea);
+
+                  if (arr[end] > arr[start]) {
+                        start++;
+                  } else {
+                        end--;
+                  }
+            }
+            return maxArea;
       }
 }
