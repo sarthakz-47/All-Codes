@@ -181,6 +181,13 @@ class Main {
 
             System.out.println(checkAnagramBF(s10, s11));
             System.out.println(checkAnagramOP(s10, s11));
+
+            // 5.Rotate strings:
+            String s12 = "roatation";
+            String goal = "tionroata";
+            System.out.println(rotateStringBF(s12, goal));
+            System.out.println(rotateStringOP(s12, goal));
+
       }
 
       // 1
@@ -274,6 +281,36 @@ class Main {
                   }
             }
             return true;
+      }
+
+      // 5
+      public static boolean rotateStringBF(String s, String goal) {
+            int n1 = s.length();
+            int n2 = goal.length();
+            if (n1 != n2) {
+                  return false;
+            }
+
+            for (int i = 0; i < n1; i++) {
+                  String rotated = s.substring(i) + s.substring(0, i);
+                  if (rotated.equals(s)) {
+                        return true;
+                  }
+            }
+            return false;
+      }
+
+      // 5
+      public static boolean rotateStringOP(String s, String goal) {
+            int n1 = s.length();
+            int n2 = goal.length();
+            if (n1 != n2) {
+                  return false;
+            }
+
+            String doubled = s + s;
+            boolean result = doubled.contains(goal);
+            return result;
       }
 
       public void theory() {
