@@ -188,11 +188,11 @@ document.querySelector("#inpt").addEventListener("change", (e) => {
 document.querySelector("#signup").addEventListener("submit", (e) => {
       e.preventDefault();
 
-      const username = form.elements.username.value;
-      const email = form.elements.email.value;
+      let username = document.querySelector("#username");
+      let email = document.querySelector("#email");
 
-      console.log(username);
-      console.log(email);
+      console.log(username.value);
+      console.log(email.value);
 });
 
 // More Events:
@@ -213,3 +213,22 @@ window.addEventListener("load", () => {
       console.log("Page Loaded");
 });
 
+
+// 19.6 Event Bubbeling: Events bubble up from child → parent → root.
+document.querySelector("#parent").addEventListener("click", () => {
+      console.log("Parent clicked");
+});
+document.querySelector("#child").addEventListener("click", () => {
+      console.log("Child clicked");
+});
+// to stop bubelling:
+document.querySelector("#child").addEventListener("click", (e) => {
+      e.stopPropagation();
+});
+
+// 19.7 Event Delegtaion: Instead of adding listeners to many child elements, you add one listener to parent.
+document.querySelector("ul").addEventListener("click", (e) => {
+      if (e.target.tagName === "LI") {
+            console.log("List item clicked");
+      }
+});
