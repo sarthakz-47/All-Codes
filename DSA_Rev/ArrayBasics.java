@@ -524,6 +524,13 @@ class Main {
                   x1 = x1 ^ sn[i];
             }
             System.out.println(x1);
+
+            // 9.Container with most water:
+            // 9.1 Brute Force: O(N^2)
+            int[] height = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
+            System.out.println(maxAreaBF(height));
+            // 9.2 Optimal Approach: O(N)
+            System.out.println(maxAreaOP(height));
       }
 
       public static void reverse(int[] arr, int start, int end) {
@@ -552,5 +559,40 @@ class Main {
             reverse(rt, k, rt.length - 1);
 
             return rt;
+      }
+
+      public static int maxAreaBF(int[] arr) {
+            int n = arr.length;
+            int maxArea = 0;
+            for (int i = 0; i < n; i++) {
+                  for (int j = i + 1; j < n; j++) {
+                        int ht = Math.min(arr[i], arr[j]);
+                        int wd = j - i;
+                        int currArea = ht * wd;
+                        maxArea = Math.max(currArea, maxArea);
+                  }
+            }
+            return maxArea;
+      }
+
+      public static int maxAreaOP(int arr[]) {
+            int n = arr.length;
+            int maxArea = 0;
+            int start = 0;
+            int end = n - 1;
+
+            while (start < end) {
+                  int ht = Math.min(arr[start], arr[end]);
+                  int wd = end - start;
+                  int currArea = ht * wd;
+                  maxArea = Math.max(currArea, maxArea);
+
+                  if (arr[end] > arr[start]) {
+                        start++;
+                  } else {
+                        end--;
+                  }
+            }
+            return maxArea;
       }
 }
