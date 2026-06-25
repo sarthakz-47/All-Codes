@@ -116,11 +116,11 @@ document.body.append(newBtnn);
 // newBtnn.onclick = function () {
 //       console.log("btn was clicked now");
 // }
-// 19.2.2 dblclick
+// 19.1.2 dblclick
 // newBtnn.ondblclick = function () {
 //       console.log("btn was dbl clicked now");
 // };
-// 19.2.3 mouseDown
+// 19.1.3 mouseDown
 // newBtnn.onmouseenter = function () {
 //       console.log("hi");
 // }
@@ -130,3 +130,86 @@ document.body.append(newBtnn);
 newBtnn.addEventListener("dblclick", () => {
       console.log("Clicked");
 });
+
+newBtnn.addEventListener("click", (event) => {
+      console.log(event);
+});
+
+// 19.2.1 Event listners for diffrent elements:
+let myDiv = document.querySelector("#myDiv");
+myDiv.addEventListener("mouseenter", () => {
+      console.log("You entered the box.");
+});
+let myPara = document.querySelector("#myPara");
+myPara.addEventListener("click", () => {
+      myPara.style.color = "blue";
+});
+
+// 19.3 "this" in event listners:
+// normal function:
+myDiv.addEventListener("mouseenter", function () {
+      console.log(this);
+});
+// arrow function:
+myDiv.addEventListener("mouseenter", (e) => {
+      console.log(this);
+});
+
+// 19.4 Keyboard Events:
+// 19.4.1 Key press
+let inp = document.querySelector("#inp");
+inp.addEventListener("keydown", (event) => {
+      console.log(event.key);
+      console.log("key was pressed");
+});
+// 19.4.2 Key realeased
+inp.addEventListener("keyup", (event) => {
+      console.log("key was realeased");
+});
+
+
+// 19.5 Form Events:
+const form = document.getElementById("login");
+// 19.5.1 Submit event:
+form.addEventListener("submit", (e) => {
+      e.preventDefault(); //prevents submission window
+      console.log("Submitted");
+});
+// 19.5.2 input event:
+document.querySelector("#inpt").addEventListener("input", (e) => {
+      console.log(e.target.value);
+});
+// 19.5.3 change event:
+document.querySelector("#inpt").addEventListener("change", (e) => {
+      console.log("chanegd");
+});
+
+// 19.5.4 Extracting data from form:
+document.querySelector("#signup").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const username = form.elements.username.value;
+      const email = form.elements.email.value;
+
+      console.log(username);
+      console.log(email);
+});
+
+// More Events:
+// Scroll Event:
+window.addEventListener("scroll", () => {
+      console.log("Scrolling");
+});
+// Resize Event:
+window.addEventListener("resize", () => {
+      console.log(window.innerWidth);
+});
+// Copy Event:
+document.addEventListener("copy", () => {
+      console.log("Copied");
+});
+// Page Reload:
+window.addEventListener("load", () => {
+      console.log("Page Loaded");
+});
+
