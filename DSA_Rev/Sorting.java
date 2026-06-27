@@ -95,7 +95,7 @@ public class Sorting {
         // selectionSort(arr, n);
 
         // insertionSort(arr, n);
-        mergeSort(arr, 0, n - 1);
+        // mergeSort(arr, 0, n - 1);
         for (int nums : arr) {
             System.out.print(nums + " ");
         }
