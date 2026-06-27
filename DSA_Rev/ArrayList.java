@@ -159,6 +159,14 @@ class Main {
             System.out.println(maxAreaBF(height));
             // 4.2 Optimal Approach: O(N)
             System.out.println(maxAreaOP(height));
+
+            // 5.Pair Sum:
+            // 5.1 Brute Force:
+            int[] ps = { 1, 2, 3, 4, 5, 6 };
+            int target = 5;
+            System.out.println(Arrays.toString(pairSumBF(ps, target)));
+            // 5.2 Optimal Solution:
+            System.out.println(Arrays.toString(pairSumOP(ps, target)));
       }
 
       public static int maxAreaBF(int[] arr) {
@@ -194,5 +202,31 @@ class Main {
                   }
             }
             return maxArea;
+      }
+
+      public static int[] pairSumBF(int[] ps, int tar) {
+            for (int i = 0; i < ps.length; i++) {
+                  for (int j = i + 1; j < ps.length; j++) {
+                        if (ps[i] + ps[j] == tar) {
+                              return new int[] { i, j };
+                        }
+                  }
+            }
+            return null;
+      }
+
+      public static int[] pairSumOP(int ps[], int tar) {
+            int start = 0;
+            int end = ps.length - 1;
+            while (start < end) {
+                  if (ps[start] + ps[end] == tar) {
+                        return new int[] { start, end };
+                  } else if (ps[start] + ps[end] > tar) {
+                        end--;
+                  } else {
+                        start++;
+                  }
+            }
+            return null;
       }
 }
