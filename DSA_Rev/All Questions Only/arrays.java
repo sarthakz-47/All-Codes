@@ -44,6 +44,31 @@ class Main {
 
         int mco[] = { 1, 0, 1, 1, 0, 1 };
         System.out.println(mco(mco));
+
+        int mss[] = { 2, 3, 5, -2, 7, -4 };
+        System.out.println(mssBF(mss));
+        System.out.println(mssBS(mss));
+        System.out.println(mssOP(mss));
+
+        int[][] sp = { { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
+        };
+        spiral(sp);
+        System.out.println();
+
+        System.out.println(dsBF(sp));
+        System.out.println(dsOP(sp));
+
+        ssm(sp, 7);
+        System.out.println();
+
+        int bs[] = { 7, 1, 5, 3, 6, 4 };
+        System.out.println(bbssBF(bs));
+        System.out.println(bbssOP(bs));
+
+        int ssr[] = { 4, 5, 6, 7, 0, 1, 2 };
+        System.out.println(ssr(ssr, 2));
     }
 
     // 1.Print Largest:
@@ -214,11 +239,200 @@ class Main {
         }
         return maxCount;
     }
-    // 12.max subarray sum:
-    // 13.best time to buy sell stocks:
-    // 14.spiral matrix:
-    // 15.digoanl sum:
-    // 16.search in sorted matrix:
-    // 17.search in sorted rotated array:
 
+    // 12.max subarray sum:
+    public static int mssBF(int arr[]) {
+        int currSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr.length; j++) {
+                currSum = 0;
+                for (int k = i; k <= j; k++) {
+                    currSum += arr[k];
+                }
+                maxSum = Math.max(maxSum, currSum);
+            }
+        }
+        return maxSum;
+    }
+
+    public static int mssBS(int[] arr) {
+        int currSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+
+        int[] prefix = new int[arr.length];
+        prefix[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            prefix[i] = prefix[i - 1] + arr[i];
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr.length; j++) {
+                if (i == 0) {
+                    currSum = prefix[j];
+                } else {
+                    currSum = prefix[j] - prefix[i - 1];
+                }
+                maxSum = Math.max(currSum, maxSum);
+            }
+        }
+        return maxSum;
+    }
+
+    public static int mssOP(int arr[]) {
+
+        int currSum = 0;
+        int maxSum = Integer.MIN_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            currSum += arr[i];
+            maxSum = Math.max(maxSum, currSum);
+            if (currSum < 0) {
+                currSum = 0;
+            }
+        }
+        return maxSum;
+    }
+
+    // 13.best time to buy sell stocks:
+    public static int bbssBF(int arr[]) {
+        int profit = 0;
+        int maxProfit = Integer.MIN_VALUE;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                profit = arr[j] - arr[i];
+                maxProfit = Math.max(profit, maxProfit);
+            }
+        }
+        return maxProfit;
+    }
+
+    public static int bbssOP(int[] arr) {
+        int minPrice = arr[0];
+        int profit = 0;
+        int maxProfit = Integer.MIN_VALUE;
+
+        for (int i = 1; i < arr.length; i++) {
+            profit = arr[i] - minPrice;
+            maxProfit = Math.max(profit, maxProfit);
+            minPrice = Math.min(minPrice, arr[i]);
+        }
+        return maxProfit;
+    }
+
+    // 14.spiral matrix:
+    public static void spiral(int[][] arr) {
+        int n = arr.length;
+        int m = arr[0].length;
+
+        int top = 0, bottom = n - 1;
+        int left = 0, right = m - 1;
+
+        while (top <= bottom && left <= right) {
+
+            for (int i = left; i <= right; i++) {
+                System.out.print(arr[top][i] + " ");
+            }
+            top++;
+
+            for (int i = top; i <= bottom; i++) {
+                System.out.print(arr[i][right] + " ");
+            }
+            right--;
+
+            if (top <= bottom) {
+                for (int i = right; i >= left; i--) {
+                    System.out.print(arr[bottom][i] + " ");
+                }
+                bottom--;
+            }
+
+            if (left <= right) {
+                for (int i = bottom; i >= top; i--) {
+                    System.out.print(arr[i][left] + " ");
+                }
+                left++;
+            }
+        }
+    }
+
+    // 15.digoanl sum:
+    public static int dsBF(int arr[][]) {
+        int sum = 0;
+        int n = arr.length;
+        int m = arr[0].length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (arr[i][j] == arr[j][i]) {
+                    sum += arr[i][j];
+                } else if (i != j && i + j == n - 1) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+
+    public static int dsOP(int arr[][]) {
+        int sum = 0;
+        int n = arr.length;
+
+        for (int i = 0; i < n; i++) {
+            sum += arr[i][i];
+            sum += arr[i][n - i - 1];
+        }
+
+        if (n % 2 == 1) {
+            sum -= arr[n / 2][n / 2];
+        }
+
+        return sum;
+    }
+
+    // 16.search in sorted matrix:
+    public static void ssm(int arr[][], int key) {
+        int n = arr.length;
+        int m = arr[0].length;
+
+        int start = 0;
+        int end = m - 1;
+
+        while (start < n && end >= 0) {
+            if (arr[start][end] == key) {
+                System.out.print(start + "," + end);
+                return;
+            } else if (arr[start][end] < key) {
+                start++;
+            } else {
+                end--;
+            }
+        }
+    }
+
+    // 17.search in sorted rotated array:
+    public static int ssr(int arr[], int key) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (arr[mid] == key) {
+                return mid;
+            } else if (arr[start] <= arr[mid]) {
+                if (arr[start] <= key && key < arr[mid]) {
+                    end = mid - 1;
+                } else {
+                    start = mid + 1;
+                }
+            } else {
+                if (arr[mid] < key && key <= arr[end]) {
+                    start = mid + 1;
+                } else {
+                    end = mid - 1;
+                }
+            }
+        }
+        return -1;
+    }
 }
