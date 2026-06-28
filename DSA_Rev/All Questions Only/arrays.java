@@ -69,6 +69,10 @@ class Main {
 
         int ssr[] = { 4, 5, 6, 7, 0, 1, 2 };
         System.out.println(ssr(ssr, 2));
+
+        int tr[] = { 5, 3, 1, 0, 2, 6 };
+        System.out.println(trBS(tr));
+        System.out.println(trOP(tr));
     }
 
     // 1.Print Largest:
@@ -434,5 +438,52 @@ class Main {
             }
         }
         return -1;
+    }
+
+    // 18.Trapping Rainwater:
+    public static int trBS(int arr[]) {
+        int[] leftmax = new int[arr.length];
+        leftmax[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            leftmax[i] = Math.max(leftmax[i - 1], arr[i]);
+        }
+
+        int[] rightmax = new int[arr.length];
+        rightmax[arr.length - 1] = arr[arr.length - 1];
+        for (int i = arr.length - 2; i >= 0; i--) {
+            rightmax[i] = Math.max(rightmax[i + 1], arr[i]);
+        }
+
+        int trappedWater = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int waterLvl = Math.min(leftmax[i], rightmax[i]);
+            trappedWater += waterLvl - arr[i];
+        }
+        return trappedWater;
+    }
+
+    public static int trOP(int arr[]) {
+        int left = 0;
+        int right = arr.length - 1;
+        int leftMax = 0, rightMax = 0, trappedWater = 0;
+
+        while (left < right) {
+            if (arr[left] < arr[right]) {
+                if (arr[left] > leftMax) {
+                    leftMax = arr[left];
+                } else {
+                    trappedWater += leftMax - arr[left];
+                }
+                left++;
+            } else {
+                if (arr[right] > rightMax) {
+                    rightMax = arr[right];
+                } else {
+                    trappedWater += rightMax - arr[right];
+                }
+                right--;
+            }
+        }
+        return trappedWater;
     }
 }
