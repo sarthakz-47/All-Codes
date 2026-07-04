@@ -1,6 +1,8 @@
 package DSA_Rev;
 
-class LinkedList {
+import java.util.LinkedList;
+
+class SLinkedList {
     // 1.What is Linked List?
     // A Linked List is a linear data structure where elements are stored in nodes.
 
@@ -417,8 +419,109 @@ class LinkedList {
         prev.next = null;
     }
 
+    // 21.How to sort LL using Merge Sort:
+    public Node mergeSort(Node head) {
+        // check if no element or only one element:
+        if (head == null || head.next == null) {
+            return head;
+        }
+        // find mid
+        Node mid = getMid(head);
+        Node right = mid.next;
+        mid.next = null;
+
+        // left & right MS
+        Node newLeft = mergeSort(head);
+        Node newRight = mergeSort(right);
+
+        // merge
+        return merge(newLeft, newRight);
+    }
+
+    public Node getMid(Node head) {
+        Node slow = head;
+        Node fast = head.next;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
+
+    public Node merge(Node left, Node right) {
+        // create a temp LL:
+        Node mergedLL = new Node(-1);
+        Node temp = mergedLL;
+
+        while (left != null && right != null) {
+            if (left.data <= right.data) {
+                temp.next = left;
+                left = left.next;
+                temp = temp.next;
+            } else {
+                temp.next = right;
+                right = right.next;
+                temp = temp.next;
+            }
+        }
+
+        while (left != null) {
+            temp.next = left;
+            left = left.next;
+            temp = temp.next;
+        }
+
+        while (right != null) {
+            temp.next = right;
+            right = right.next;
+            temp = temp.next;
+        }
+
+        return mergedLL.next;
+    }
+
+    public void ZigZag() {
+        // find mid:
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        Node mid = slow;
+
+        // reverse second half:
+        Node curr = mid.next;
+        mid.next = null;
+
+        Node prev = null;
+        Node next;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        Node left = head;
+        Node right = prev;
+        Node nextL, nextR;
+        // megrge zigzag:
+        while (left != null && right != null) {
+            nextL = left.next;
+            left.next = right;
+            nextR = right.next;
+            right.next = nextL;
+
+            left = nextL;
+            right = nextR;
+        }
+    }
+
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
+        SLinkedList ll = new SLinkedList();
         ll.addFirst(10); // 10->null
         ll.addFirst(20); // 20->10->null
 
@@ -437,7 +540,7 @@ class LinkedList {
         // ll.printLL();
         System.out.println(ll.size);
 
-        LinkedList ll2 = new LinkedList();
+        SLinkedList ll2 = new SLinkedList();
         ll2.addFirst(1);
         ll2.addLast(2);
         ll2.addLast(2);
@@ -449,6 +552,41 @@ class LinkedList {
         ll.head.next.next = new Node(2);
         ll.head.next.next.next = ll.head;
         System.out.println(ll.isCycle());
+
+        // How to create a SLinkedList:
+        LinkedList<Integer> LL = new LinkedList<>();
+        // How to add nodes in LL:
+        LL.addLast(1);
+        LL.addLast(2);
+        LL.addFirst(3);
+        // How to print SLinkedList:
+        System.out.println(LL);
+        // How to remove nodes in LL:
+        LL.removeLast();
+        LL.removeFirst();
+        System.out.println(LL);
+        System.out.println(LL.getLast());
+        System.out.println(LL.size());
+
+        // Merge sort:
+        SLinkedList ll3 = new SLinkedList();
+        ll3.addFirst(5);
+        ll3.addFirst(1);
+        ll3.addFirst(3);
+        ll3.addFirst(4);
+        ll3.printLL();
+        ll3.head = ll3.mergeSort(ll3.head);
+        ll3.printLL();
+
+        SLinkedList ll4 = new SLinkedList();
+        ll4.addFirst(6);
+        ll4.addFirst(5);
+        ll4.addFirst(4);
+        ll4.addFirst(3);
+        ll4.addFirst(2);
+        ll4.addFirst(1);
+        ll4.ZigZag();
+        ll4.printLL();
     }
 
 }
